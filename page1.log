@@ -1,0 +1,11 @@
+This is XeTeX, Version 3.1415926-2.4-0.9998 (TeX Live 2012/Debian) (format=xetex 2012.12.9)  9 DEC 2012 12:36
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**page1.tex
+(./page1.tex
+! Undefined control sequence.
+l.4 \psset
+          {xunit=.5pt,yunit=.5pt,runit=.5pt}
+? x
+No pages of output.

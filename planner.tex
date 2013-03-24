@@ -1,0 +1,1971 @@
+\documentclass[12pt]{article}
+
+%the following lines change font
+%\usepackage[T1]{fontenc}
+%\usepackage[scaled]{helvet}
+%\renewcommand*\familydefault{\sfdefault}
+
+%%Paletino
+\usepackage[T1]{fontenc}
+\usepackage[sc]{mathpazo}
+\linespread{1.05}
+
+%%Biolinium
+%\usepackage[T1]{fontenc}
+%\usepackage{libertine}
+%\renewcommand*\familydefault{\sfdefault}  %% Only if the base font of the document is to be sans serif
+
+
+%This is where page size is changed. currently set at half-legal
+\usepackage[margin=0in, paperwidth=7in, paperheight=8.5in]{geometry}
+%Take away all margins
+\geometry{top=0cm,bottom=0cm,left=0cm,right=0cm,nohead,nofoot}
+%Color is available if wanted
+\usepackage[usenames, dvipsnames]{color}
+
+%Don't know what all this does, but I'd keep it.
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{multirow}
+
+%This next package is cool (and self explanitory)
+\usepackage{colortbl}
+
+%Allow rotating text
+\usepackage{rotating}
+
+%Remove page numbers
+\pagestyle{empty}
+
+%Define a gray that shows up on the printer
+\definecolor{dark-gray}{gray}{0.4}
+
+% Finally!
+\begin{document}
+
+%This is a dirty hack. Later we will need to redefine (renewcommand) \Sun etc
+% so they will need to be defined once first otherwise renewcommand complains
+\newcommand{\Sun}{NULL}
+\newcommand{\Mon}{NULL}
+\newcommand{\Tue}{NULL}
+\newcommand{\Wed}{NULL}
+\newcommand{\Thr}{NULL}
+\newcommand{\Fri}{NULL}
+\newcommand{\Sat}{NULL}
+\newcommand{\Cal}{NULL}
+\newcommand{\PageCal}{NULL}
+
+%okay, we want the svgs from inkscape to fill the whole page
+\def\svgwidth{\paperwidth}
+
+%This crap is just to create a blank page (the cover), because we want the first
+%page of the planner to start on page 2 so that the next days of the week are
+%adjacent when the planner is opened.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%Begining of generated content%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 
+
+\LARGE{}
+
+\vspace*{\fill}
+
+\begin{tabular*}{\textwidth}[p]{@{\hspace{215pt}}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{\extracolsep{38pt}}l}
+S & M & T & W & T & F & S &\\ 
+\cline{1-7}
+& & & & \textcolor{Gray}{1}& \textcolor{Gray}{2}& \textcolor{Gray}{3}&\multirow{5}{*}{\begin{sideways}\textcolor{Gray}{~~~~November}\end{sideways}}\\
+\textcolor{Gray}{4}& \textcolor{Gray}{5}& \textcolor{Gray}{6}& \textcolor{Gray}{7}& \textcolor{Gray}{8}& \textcolor{Gray}{9}& \textcolor{Gray}{10}& \\
+\textcolor{Gray}{11}& \textcolor{Gray}{12}& \textcolor{Gray}{13}& \textcolor{Gray}{14}& \textcolor{Gray}{15}& \textcolor{Gray}{16}& \textcolor{Gray}{17}& \\
+\textcolor{Gray}{18}& \textcolor{Gray}{19}& \textcolor{Gray}{20}& \textcolor{Gray}{21}& \textcolor{Gray}{22}& \textcolor{Gray}{23}& \textcolor{Gray}{24}& \\
+\textcolor{Gray}{25}& \textcolor{Gray}{26}& \textcolor{Gray}{27}& \textcolor{Gray}{28}& \textcolor{Gray}{29}& \textcolor{Gray}{30}& \textbf{1}&\multirow{5}{*}{\begin{sideways}\textbf{December}\end{sideways}}\\
+\textbf{2}& \textbf{3}& \textbf{4}& \textbf{5}& \textbf{6}& \textbf{7}& \textbf{8}& \\
+\textbf{9}& \textbf{10}& \textbf{11}& \textbf{12}& \textbf{13}& \textbf{14}& \textbf{15}& \\
+\textbf{16}& \textbf{17}& \textbf{18}& \textbf{19}& \textbf{20}& \textbf{21}& \textbf{22}& \\
+\textbf{23}& \textbf{24}& \textbf{25}& \textbf{26}& \textbf{27}& \textbf{28}& \textbf{29}& \\
+\textbf{30}& \textbf{31}& \textcolor{Gray}{1}& \textcolor{Gray}{2}& \textcolor{Gray}{3}& \textcolor{Gray}{4}& \textcolor{Gray}{5}&\multirow{5}{*}{\begin{sideways}\textcolor{Gray}{January~~~~}\end{sideways}}\\
+\textcolor{Gray}{6}& \textcolor{Gray}{7}& \textcolor{Gray}{8}& \textcolor{Gray}{9}& \textcolor{Gray}{10}& \textcolor{Gray}{11}& \textcolor{Gray}{12}& \\
+\textcolor{Gray}{13}& \textcolor{Gray}{14}& \textcolor{Gray}{15}& \textcolor{Gray}{16}& \textcolor{Gray}{17}& \textcolor{Gray}{18}& \textcolor{Gray}{19}& \\
+\textcolor{Gray}{20}& \textcolor{Gray}{21}& \textcolor{Gray}{22}& \textcolor{Gray}{23}& \textcolor{Gray}{24}& \textcolor{Gray}{25}& \textcolor{Gray}{26}& \\
+\textcolor{Gray}{27}& \textcolor{Gray}{28}& \textcolor{Gray}{29}& \textcolor{Gray}{30}& \textcolor{Gray}{31}& 
+\end{tabular*}
+
+\vspace*{\fill}
+
+\normalsize{}
+
+\newpage
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{23}
+\renewcommand{\Mon}{24}
+\renewcommand{\Tue}{25}
+\renewcommand{\Wed}{26}
+\renewcommand{\Thr}{27}
+\renewcommand{\Fri}{28}
+\renewcommand{\Sat}{29}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{December}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{25}&\textcolor{dark-gray}{26}&\textcolor{dark-gray}{27}&\textcolor{dark-gray}{28}&\textcolor{dark-gray}{29}&\textcolor{dark-gray}{30}&1\\
+2&3&4&5&6&7&8\\
+9&10&11&12&13&14&15\\
+16&17&18&19&20&21&22\\
+\rowcolor[gray]{.8}[2pt][2pt]23&24&25&26&27&28&29\\
+30&31&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+~\newpage
+\LARGE{}
+
+\vspace*{\fill}
+
+\begin{tabular*}{\textwidth}[p]{@{\hspace{215pt}}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{\extracolsep{38pt}}l}
+S & M & T & W & T & F & S &\\ 
+\cline{1-7}
+& & & & & & \textcolor{Gray}{1}&\multirow{5}{*}{\begin{sideways}\textcolor{Gray}{~~~~December}\end{sideways}}\\
+\textcolor{Gray}{2}& \textcolor{Gray}{3}& \textcolor{Gray}{4}& \textcolor{Gray}{5}& \textcolor{Gray}{6}& \textcolor{Gray}{7}& \textcolor{Gray}{8}& \\
+\textcolor{Gray}{9}& \textcolor{Gray}{10}& \textcolor{Gray}{11}& \textcolor{Gray}{12}& \textcolor{Gray}{13}& \textcolor{Gray}{14}& \textcolor{Gray}{15}& \\
+\textcolor{Gray}{16}& \textcolor{Gray}{17}& \textcolor{Gray}{18}& \textcolor{Gray}{19}& \textcolor{Gray}{20}& \textcolor{Gray}{21}& \textcolor{Gray}{22}& \\
+\textcolor{Gray}{23}& \textcolor{Gray}{24}& \textcolor{Gray}{25}& \textcolor{Gray}{26}& \textcolor{Gray}{27}& \textcolor{Gray}{28}& \textcolor{Gray}{29}& \\
+\textcolor{Gray}{30}& \textcolor{Gray}{31}& \textbf{1}& \textbf{2}& \textbf{3}& \textbf{4}& \textbf{5}&\multirow{5}{*}{\begin{sideways}\textbf{January}\end{sideways}}\\
+\textbf{6}& \textbf{7}& \textbf{8}& \textbf{9}& \textbf{10}& \textbf{11}& \textbf{12}& \\
+\textbf{13}& \textbf{14}& \textbf{15}& \textbf{16}& \textbf{17}& \textbf{18}& \textbf{19}& \\
+\textbf{20}& \textbf{21}& \textbf{22}& \textbf{23}& \textbf{24}& \textbf{25}& \textbf{26}& \\
+\textbf{27}& \textbf{28}& \textbf{29}& \textbf{30}& \textbf{31}& \textcolor{Gray}{1}& \textcolor{Gray}{2}&\multirow{5}{*}{\begin{sideways}\textcolor{Gray}{February~~~~}\end{sideways}}\\
+\textcolor{Gray}{3}& \textcolor{Gray}{4}& \textcolor{Gray}{5}& \textcolor{Gray}{6}& \textcolor{Gray}{7}& \textcolor{Gray}{8}& \textcolor{Gray}{9}& \\
+\textcolor{Gray}{10}& \textcolor{Gray}{11}& \textcolor{Gray}{12}& \textcolor{Gray}{13}& \textcolor{Gray}{14}& \textcolor{Gray}{15}& \textcolor{Gray}{16}& \\
+\textcolor{Gray}{17}& \textcolor{Gray}{18}& \textcolor{Gray}{19}& \textcolor{Gray}{20}& \textcolor{Gray}{21}& \textcolor{Gray}{22}& \textcolor{Gray}{23}& \\
+\textcolor{Gray}{24}& \textcolor{Gray}{25}& \textcolor{Gray}{26}& \textcolor{Gray}{27}& \textcolor{Gray}{28}& 
+\end{tabular*}
+
+\vspace*{\fill}
+
+\normalsize{}
+
+\newpage
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{30}
+\renewcommand{\Mon}{31}
+\renewcommand{\Tue}{1}
+\renewcommand{\Wed}{2}
+\renewcommand{\Thr}{3}
+\renewcommand{\Fri}{4}
+\renewcommand{\Sat}{5}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{January}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\rowcolor[gray]{.8}[2pt][2pt]\textcolor{dark-gray}{30}&\textcolor{dark-gray}{31}&1&2&3&4&5\\
+6&7&8&9&10&11&12\\
+13&14&15&16&17&18&19\\
+20&21&22&23&24&25&26\\
+27&28&29&30&31&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}\\
+\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{6}
+\renewcommand{\Mon}{7}
+\renewcommand{\Tue}{8}
+\renewcommand{\Wed}{9}
+\renewcommand{\Thr}{10}
+\renewcommand{\Fri}{11}
+\renewcommand{\Sat}{12}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{January}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{30}&\textcolor{dark-gray}{31}&1&2&3&4&5\\
+\rowcolor[gray]{.8}[2pt][2pt]6&7&8&9&10&11&12\\
+13&14&15&16&17&18&19\\
+20&21&22&23&24&25&26\\
+27&28&29&30&31&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}\\
+\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{13}
+\renewcommand{\Mon}{14}
+\renewcommand{\Tue}{15}
+\renewcommand{\Wed}{16}
+\renewcommand{\Thr}{17}
+\renewcommand{\Fri}{18}
+\renewcommand{\Sat}{19}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{January}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{30}&\textcolor{dark-gray}{31}&1&2&3&4&5\\
+6&7&8&9&10&11&12\\
+\rowcolor[gray]{.8}[2pt][2pt]13&14&15&16&17&18&19\\
+20&21&22&23&24&25&26\\
+27&28&29&30&31&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}\\
+\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{20}
+\renewcommand{\Mon}{21}
+\renewcommand{\Tue}{22}
+\renewcommand{\Wed}{23}
+\renewcommand{\Thr}{24}
+\renewcommand{\Fri}{25}
+\renewcommand{\Sat}{26}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{January}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{30}&\textcolor{dark-gray}{31}&1&2&3&4&5\\
+6&7&8&9&10&11&12\\
+13&14&15&16&17&18&19\\
+\rowcolor[gray]{.8}[2pt][2pt]20&21&22&23&24&25&26\\
+27&28&29&30&31&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}\\
+\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{27}
+\renewcommand{\Mon}{28}
+\renewcommand{\Tue}{29}
+\renewcommand{\Wed}{30}
+\renewcommand{\Thr}{31}
+\renewcommand{\Fri}{1}
+\renewcommand{\Sat}{2}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{January}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{30}&\textcolor{dark-gray}{31}&1&2&3&4&5\\
+6&7&8&9&10&11&12\\
+13&14&15&16&17&18&19\\
+20&21&22&23&24&25&26\\
+\rowcolor[gray]{.8}[2pt][2pt]27&28&29&30&31&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}\\
+\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+~\newpage
+\LARGE{}
+
+\vspace*{\fill}
+
+\begin{tabular*}{\textwidth}[p]{@{\hspace{215pt}}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{\extracolsep{38pt}}l}
+S & M & T & W & T & F & S &\\ 
+\cline{1-7}
+& & \textcolor{Gray}{1}& \textcolor{Gray}{2}& \textcolor{Gray}{3}& \textcolor{Gray}{4}& \textcolor{Gray}{5}&\multirow{5}{*}{\begin{sideways}\textcolor{Gray}{~~~~January}\end{sideways}}\\
+\textcolor{Gray}{6}& \textcolor{Gray}{7}& \textcolor{Gray}{8}& \textcolor{Gray}{9}& \textcolor{Gray}{10}& \textcolor{Gray}{11}& \textcolor{Gray}{12}& \\
+\textcolor{Gray}{13}& \textcolor{Gray}{14}& \textcolor{Gray}{15}& \textcolor{Gray}{16}& \textcolor{Gray}{17}& \textcolor{Gray}{18}& \textcolor{Gray}{19}& \\
+\textcolor{Gray}{20}& \textcolor{Gray}{21}& \textcolor{Gray}{22}& \textcolor{Gray}{23}& \textcolor{Gray}{24}& \textcolor{Gray}{25}& \textcolor{Gray}{26}& \\
+\textcolor{Gray}{27}& \textcolor{Gray}{28}& \textcolor{Gray}{29}& \textcolor{Gray}{30}& \textcolor{Gray}{31}& \textbf{1}& \textbf{2}&\multirow{5}{*}{\begin{sideways}\textbf{February}\end{sideways}}\\
+\textbf{3}& \textbf{4}& \textbf{5}& \textbf{6}& \textbf{7}& \textbf{8}& \textbf{9}& \\
+\textbf{10}& \textbf{11}& \textbf{12}& \textbf{13}& \textbf{14}& \textbf{15}& \textbf{16}& \\
+\textbf{17}& \textbf{18}& \textbf{19}& \textbf{20}& \textbf{21}& \textbf{22}& \textbf{23}& \\
+\textbf{24}& \textbf{25}& \textbf{26}& \textbf{27}& \textbf{28}& \textcolor{Gray}{1}& \textcolor{Gray}{2}&\multirow{5}{*}{\begin{sideways}\textcolor{Gray}{March~~~~}\end{sideways}}\\
+\textcolor{Gray}{3}& \textcolor{Gray}{4}& \textcolor{Gray}{5}& \textcolor{Gray}{6}& \textcolor{Gray}{7}& \textcolor{Gray}{8}& \textcolor{Gray}{9}& \\
+\textcolor{Gray}{10}& \textcolor{Gray}{11}& \textcolor{Gray}{12}& \textcolor{Gray}{13}& \textcolor{Gray}{14}& \textcolor{Gray}{15}& \textcolor{Gray}{16}& \\
+\textcolor{Gray}{17}& \textcolor{Gray}{18}& \textcolor{Gray}{19}& \textcolor{Gray}{20}& \textcolor{Gray}{21}& \textcolor{Gray}{22}& \textcolor{Gray}{23}& \\
+\textcolor{Gray}{24}& \textcolor{Gray}{25}& \textcolor{Gray}{26}& \textcolor{Gray}{27}& \textcolor{Gray}{28}& \textcolor{Gray}{29}& \textcolor{Gray}{30}& \\
+\textcolor{Gray}{31}& 
+\end{tabular*}
+
+\vspace*{\fill}
+
+\normalsize{}
+
+\newpage
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{3}
+\renewcommand{\Mon}{4}
+\renewcommand{\Tue}{5}
+\renewcommand{\Wed}{6}
+\renewcommand{\Thr}{7}
+\renewcommand{\Fri}{8}
+\renewcommand{\Sat}{9}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{February}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{27}&\textcolor{dark-gray}{28}&\textcolor{dark-gray}{29}&\textcolor{dark-gray}{30}&\textcolor{dark-gray}{31}&1&2\\
+\rowcolor[gray]{.8}[2pt][2pt]3&4&5&6&7&8&9\\
+10&11&12&13&14&15&16\\
+17&18&19&20&21&22&23\\
+24&25&26&27&28&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}\\
+\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{10}
+\renewcommand{\Mon}{11}
+\renewcommand{\Tue}{12}
+\renewcommand{\Wed}{13}
+\renewcommand{\Thr}{14}
+\renewcommand{\Fri}{15}
+\renewcommand{\Sat}{16}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{February}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{27}&\textcolor{dark-gray}{28}&\textcolor{dark-gray}{29}&\textcolor{dark-gray}{30}&\textcolor{dark-gray}{31}&1&2\\
+3&4&5&6&7&8&9\\
+\rowcolor[gray]{.8}[2pt][2pt]10&11&12&13&14&15&16\\
+17&18&19&20&21&22&23\\
+24&25&26&27&28&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}\\
+\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{17}
+\renewcommand{\Mon}{18}
+\renewcommand{\Tue}{19}
+\renewcommand{\Wed}{20}
+\renewcommand{\Thr}{21}
+\renewcommand{\Fri}{22}
+\renewcommand{\Sat}{23}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{February}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{27}&\textcolor{dark-gray}{28}&\textcolor{dark-gray}{29}&\textcolor{dark-gray}{30}&\textcolor{dark-gray}{31}&1&2\\
+3&4&5&6&7&8&9\\
+10&11&12&13&14&15&16\\
+\rowcolor[gray]{.8}[2pt][2pt]17&18&19&20&21&22&23\\
+24&25&26&27&28&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}\\
+\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{24}
+\renewcommand{\Mon}{25}
+\renewcommand{\Tue}{26}
+\renewcommand{\Wed}{27}
+\renewcommand{\Thr}{28}
+\renewcommand{\Fri}{1}
+\renewcommand{\Sat}{2}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{February}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{27}&\textcolor{dark-gray}{28}&\textcolor{dark-gray}{29}&\textcolor{dark-gray}{30}&\textcolor{dark-gray}{31}&1&2\\
+3&4&5&6&7&8&9\\
+10&11&12&13&14&15&16\\
+17&18&19&20&21&22&23\\
+\rowcolor[gray]{.8}[2pt][2pt]24&25&26&27&28&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}\\
+\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+~\newpage
+\LARGE{}
+
+\vspace*{\fill}
+
+\begin{tabular*}{\textwidth}[p]{@{\hspace{215pt}}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{\extracolsep{38pt}}l}
+S & M & T & W & T & F & S &\\ 
+\cline{1-7}
+& & & & & \textcolor{Gray}{1}& \textcolor{Gray}{2}&\multirow{5}{*}{\begin{sideways}\textcolor{Gray}{~~~~February}\end{sideways}}\\
+\textcolor{Gray}{3}& \textcolor{Gray}{4}& \textcolor{Gray}{5}& \textcolor{Gray}{6}& \textcolor{Gray}{7}& \textcolor{Gray}{8}& \textcolor{Gray}{9}& \\
+\textcolor{Gray}{10}& \textcolor{Gray}{11}& \textcolor{Gray}{12}& \textcolor{Gray}{13}& \textcolor{Gray}{14}& \textcolor{Gray}{15}& \textcolor{Gray}{16}& \\
+\textcolor{Gray}{17}& \textcolor{Gray}{18}& \textcolor{Gray}{19}& \textcolor{Gray}{20}& \textcolor{Gray}{21}& \textcolor{Gray}{22}& \textcolor{Gray}{23}& \\
+\textcolor{Gray}{24}& \textcolor{Gray}{25}& \textcolor{Gray}{26}& \textcolor{Gray}{27}& \textcolor{Gray}{28}& \textbf{1}& \textbf{2}&\multirow{5}{*}{\begin{sideways}\textbf{March}\end{sideways}}\\
+\textbf{3}& \textbf{4}& \textbf{5}& \textbf{6}& \textbf{7}& \textbf{8}& \textbf{9}& \\
+\textbf{10}& \textbf{11}& \textbf{12}& \textbf{13}& \textbf{14}& \textbf{15}& \textbf{16}& \\
+\textbf{17}& \textbf{18}& \textbf{19}& \textbf{20}& \textbf{21}& \textbf{22}& \textbf{23}& \\
+\textbf{24}& \textbf{25}& \textbf{26}& \textbf{27}& \textbf{28}& \textbf{29}& \textbf{30}& \\
+\textbf{31}& \textcolor{Gray}{1}& \textcolor{Gray}{2}& \textcolor{Gray}{3}& \textcolor{Gray}{4}& \textcolor{Gray}{5}& \textcolor{Gray}{6}&\multirow{5}{*}{\begin{sideways}\textcolor{Gray}{April~~~~}\end{sideways}}\\
+\textcolor{Gray}{7}& \textcolor{Gray}{8}& \textcolor{Gray}{9}& \textcolor{Gray}{10}& \textcolor{Gray}{11}& \textcolor{Gray}{12}& \textcolor{Gray}{13}& \\
+\textcolor{Gray}{14}& \textcolor{Gray}{15}& \textcolor{Gray}{16}& \textcolor{Gray}{17}& \textcolor{Gray}{18}& \textcolor{Gray}{19}& \textcolor{Gray}{20}& \\
+\textcolor{Gray}{21}& \textcolor{Gray}{22}& \textcolor{Gray}{23}& \textcolor{Gray}{24}& \textcolor{Gray}{25}& \textcolor{Gray}{26}& \textcolor{Gray}{27}& \\
+\textcolor{Gray}{28}& \textcolor{Gray}{29}& \textcolor{Gray}{30}& 
+\end{tabular*}
+
+\vspace*{\fill}
+
+\normalsize{}
+
+\newpage
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{3}
+\renewcommand{\Mon}{4}
+\renewcommand{\Tue}{5}
+\renewcommand{\Wed}{6}
+\renewcommand{\Thr}{7}
+\renewcommand{\Fri}{8}
+\renewcommand{\Sat}{9}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{March}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{24}&\textcolor{dark-gray}{25}&\textcolor{dark-gray}{26}&\textcolor{dark-gray}{27}&\textcolor{dark-gray}{28}&1&2\\
+\rowcolor[gray]{.8}[2pt][2pt]3&4&5&6&7&8&9\\
+10&11&12&13&14&15&16\\
+17&18&19&20&21&22&23\\
+24&25&26&27&28&29&30\\
+31&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{10}
+\renewcommand{\Mon}{11}
+\renewcommand{\Tue}{12}
+\renewcommand{\Wed}{13}
+\renewcommand{\Thr}{14}
+\renewcommand{\Fri}{15}
+\renewcommand{\Sat}{16}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{March}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{24}&\textcolor{dark-gray}{25}&\textcolor{dark-gray}{26}&\textcolor{dark-gray}{27}&\textcolor{dark-gray}{28}&1&2\\
+3&4&5&6&7&8&9\\
+\rowcolor[gray]{.8}[2pt][2pt]10&11&12&13&14&15&16\\
+17&18&19&20&21&22&23\\
+24&25&26&27&28&29&30\\
+31&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{17}
+\renewcommand{\Mon}{18}
+\renewcommand{\Tue}{19}
+\renewcommand{\Wed}{20}
+\renewcommand{\Thr}{21}
+\renewcommand{\Fri}{22}
+\renewcommand{\Sat}{23}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{March}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{24}&\textcolor{dark-gray}{25}&\textcolor{dark-gray}{26}&\textcolor{dark-gray}{27}&\textcolor{dark-gray}{28}&1&2\\
+3&4&5&6&7&8&9\\
+10&11&12&13&14&15&16\\
+\rowcolor[gray]{.8}[2pt][2pt]17&18&19&20&21&22&23\\
+24&25&26&27&28&29&30\\
+31&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{24}
+\renewcommand{\Mon}{25}
+\renewcommand{\Tue}{26}
+\renewcommand{\Wed}{27}
+\renewcommand{\Thr}{28}
+\renewcommand{\Fri}{29}
+\renewcommand{\Sat}{30}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{March}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{24}&\textcolor{dark-gray}{25}&\textcolor{dark-gray}{26}&\textcolor{dark-gray}{27}&\textcolor{dark-gray}{28}&1&2\\
+3&4&5&6&7&8&9\\
+10&11&12&13&14&15&16\\
+17&18&19&20&21&22&23\\
+\rowcolor[gray]{.8}[2pt][2pt]24&25&26&27&28&29&30\\
+31&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+~\newpage
+\LARGE{}
+
+\vspace*{\fill}
+
+\begin{tabular*}{\textwidth}[p]{@{\hspace{215pt}}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{\extracolsep{38pt}}l}
+S & M & T & W & T & F & S &\\ 
+\cline{1-7}
+& & & & & \textcolor{Gray}{1}& \textcolor{Gray}{2}&\multirow{5}{*}{\begin{sideways}\textcolor{Gray}{~~~~March}\end{sideways}}\\
+\textcolor{Gray}{3}& \textcolor{Gray}{4}& \textcolor{Gray}{5}& \textcolor{Gray}{6}& \textcolor{Gray}{7}& \textcolor{Gray}{8}& \textcolor{Gray}{9}& \\
+\textcolor{Gray}{10}& \textcolor{Gray}{11}& \textcolor{Gray}{12}& \textcolor{Gray}{13}& \textcolor{Gray}{14}& \textcolor{Gray}{15}& \textcolor{Gray}{16}& \\
+\textcolor{Gray}{17}& \textcolor{Gray}{18}& \textcolor{Gray}{19}& \textcolor{Gray}{20}& \textcolor{Gray}{21}& \textcolor{Gray}{22}& \textcolor{Gray}{23}& \\
+\textcolor{Gray}{24}& \textcolor{Gray}{25}& \textcolor{Gray}{26}& \textcolor{Gray}{27}& \textcolor{Gray}{28}& \textcolor{Gray}{29}& \textcolor{Gray}{30}& \\
+\textcolor{Gray}{31}& \textbf{1}& \textbf{2}& \textbf{3}& \textbf{4}& \textbf{5}& \textbf{6}&\multirow{5}{*}{\begin{sideways}\textbf{April}\end{sideways}}\\
+\textbf{7}& \textbf{8}& \textbf{9}& \textbf{10}& \textbf{11}& \textbf{12}& \textbf{13}& \\
+\textbf{14}& \textbf{15}& \textbf{16}& \textbf{17}& \textbf{18}& \textbf{19}& \textbf{20}& \\
+\textbf{21}& \textbf{22}& \textbf{23}& \textbf{24}& \textbf{25}& \textbf{26}& \textbf{27}& \\
+\textbf{28}& \textbf{29}& \textbf{30}& \textcolor{Gray}{1}& \textcolor{Gray}{2}& \textcolor{Gray}{3}& \textcolor{Gray}{4}&\multirow{5}{*}{\begin{sideways}\textcolor{Gray}{May~~~~}\end{sideways}}\\
+\textcolor{Gray}{5}& \textcolor{Gray}{6}& \textcolor{Gray}{7}& \textcolor{Gray}{8}& \textcolor{Gray}{9}& \textcolor{Gray}{10}& \textcolor{Gray}{11}& \\
+\textcolor{Gray}{12}& \textcolor{Gray}{13}& \textcolor{Gray}{14}& \textcolor{Gray}{15}& \textcolor{Gray}{16}& \textcolor{Gray}{17}& \textcolor{Gray}{18}& \\
+\textcolor{Gray}{19}& \textcolor{Gray}{20}& \textcolor{Gray}{21}& \textcolor{Gray}{22}& \textcolor{Gray}{23}& \textcolor{Gray}{24}& \textcolor{Gray}{25}& \\
+\textcolor{Gray}{26}& \textcolor{Gray}{27}& \textcolor{Gray}{28}& \textcolor{Gray}{29}& \textcolor{Gray}{30}& \textcolor{Gray}{31}& 
+\end{tabular*}
+
+\vspace*{\fill}
+
+\normalsize{}
+
+\newpage
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{31}
+\renewcommand{\Mon}{1}
+\renewcommand{\Tue}{2}
+\renewcommand{\Wed}{3}
+\renewcommand{\Thr}{4}
+\renewcommand{\Fri}{5}
+\renewcommand{\Sat}{6}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{April}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\rowcolor[gray]{.8}[2pt][2pt]\textcolor{dark-gray}{31}&1&2&3&4&5&6\\
+7&8&9&10&11&12&13\\
+14&15&16&17&18&19&20\\
+21&22&23&24&25&26&27\\
+28&29&30&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}\\
+\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}&\textcolor{dark-gray}{10}&\textcolor{dark-gray}{11}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{7}
+\renewcommand{\Mon}{8}
+\renewcommand{\Tue}{9}
+\renewcommand{\Wed}{10}
+\renewcommand{\Thr}{11}
+\renewcommand{\Fri}{12}
+\renewcommand{\Sat}{13}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{April}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{31}&1&2&3&4&5&6\\
+\rowcolor[gray]{.8}[2pt][2pt]7&8&9&10&11&12&13\\
+14&15&16&17&18&19&20\\
+21&22&23&24&25&26&27\\
+28&29&30&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}\\
+\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}&\textcolor{dark-gray}{10}&\textcolor{dark-gray}{11}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{14}
+\renewcommand{\Mon}{15}
+\renewcommand{\Tue}{16}
+\renewcommand{\Wed}{17}
+\renewcommand{\Thr}{18}
+\renewcommand{\Fri}{19}
+\renewcommand{\Sat}{20}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{April}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{31}&1&2&3&4&5&6\\
+7&8&9&10&11&12&13\\
+\rowcolor[gray]{.8}[2pt][2pt]14&15&16&17&18&19&20\\
+21&22&23&24&25&26&27\\
+28&29&30&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}\\
+\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}&\textcolor{dark-gray}{10}&\textcolor{dark-gray}{11}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{21}
+\renewcommand{\Mon}{22}
+\renewcommand{\Tue}{23}
+\renewcommand{\Wed}{24}
+\renewcommand{\Thr}{25}
+\renewcommand{\Fri}{26}
+\renewcommand{\Sat}{27}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{April}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{31}&1&2&3&4&5&6\\
+7&8&9&10&11&12&13\\
+14&15&16&17&18&19&20\\
+\rowcolor[gray]{.8}[2pt][2pt]21&22&23&24&25&26&27\\
+28&29&30&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}\\
+\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}&\textcolor{dark-gray}{10}&\textcolor{dark-gray}{11}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+~\newpage
+\LARGE{}
+
+\vspace*{\fill}
+
+\begin{tabular*}{\textwidth}[p]{@{\hspace{215pt}}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{\extracolsep{38pt}}l}
+S & M & T & W & T & F & S &\\ 
+\cline{1-7}
+& \textcolor{Gray}{1}& \textcolor{Gray}{2}& \textcolor{Gray}{3}& \textcolor{Gray}{4}& \textcolor{Gray}{5}& \textcolor{Gray}{6}&\multirow{5}{*}{\begin{sideways}\textcolor{Gray}{~~~~April}\end{sideways}}\\
+\textcolor{Gray}{7}& \textcolor{Gray}{8}& \textcolor{Gray}{9}& \textcolor{Gray}{10}& \textcolor{Gray}{11}& \textcolor{Gray}{12}& \textcolor{Gray}{13}& \\
+\textcolor{Gray}{14}& \textcolor{Gray}{15}& \textcolor{Gray}{16}& \textcolor{Gray}{17}& \textcolor{Gray}{18}& \textcolor{Gray}{19}& \textcolor{Gray}{20}& \\
+\textcolor{Gray}{21}& \textcolor{Gray}{22}& \textcolor{Gray}{23}& \textcolor{Gray}{24}& \textcolor{Gray}{25}& \textcolor{Gray}{26}& \textcolor{Gray}{27}& \\
+\textcolor{Gray}{28}& \textcolor{Gray}{29}& \textcolor{Gray}{30}& \textbf{1}& \textbf{2}& \textbf{3}& \textbf{4}&\multirow{5}{*}{\begin{sideways}\textbf{May}\end{sideways}}\\
+\textbf{5}& \textbf{6}& \textbf{7}& \textbf{8}& \textbf{9}& \textbf{10}& \textbf{11}& \\
+\textbf{12}& \textbf{13}& \textbf{14}& \textbf{15}& \textbf{16}& \textbf{17}& \textbf{18}& \\
+\textbf{19}& \textbf{20}& \textbf{21}& \textbf{22}& \textbf{23}& \textbf{24}& \textbf{25}& \\
+\textbf{26}& \textbf{27}& \textbf{28}& \textbf{29}& \textbf{30}& \textbf{31}& \textcolor{Gray}{1}&\multirow{5}{*}{\begin{sideways}\textcolor{Gray}{June~~~~}\end{sideways}}\\
+\textcolor{Gray}{2}& \textcolor{Gray}{3}& \textcolor{Gray}{4}& \textcolor{Gray}{5}& \textcolor{Gray}{6}& \textcolor{Gray}{7}& \textcolor{Gray}{8}& \\
+\textcolor{Gray}{9}& \textcolor{Gray}{10}& \textcolor{Gray}{11}& \textcolor{Gray}{12}& \textcolor{Gray}{13}& \textcolor{Gray}{14}& \textcolor{Gray}{15}& \\
+\textcolor{Gray}{16}& \textcolor{Gray}{17}& \textcolor{Gray}{18}& \textcolor{Gray}{19}& \textcolor{Gray}{20}& \textcolor{Gray}{21}& \textcolor{Gray}{22}& \\
+\textcolor{Gray}{23}& \textcolor{Gray}{24}& \textcolor{Gray}{25}& \textcolor{Gray}{26}& \textcolor{Gray}{27}& \textcolor{Gray}{28}& \textcolor{Gray}{29}& \\
+\textcolor{Gray}{30}& 
+\end{tabular*}
+
+\vspace*{\fill}
+
+\normalsize{}
+
+\newpage
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{28}
+\renewcommand{\Mon}{29}
+\renewcommand{\Tue}{30}
+\renewcommand{\Wed}{1}
+\renewcommand{\Thr}{2}
+\renewcommand{\Fri}{3}
+\renewcommand{\Sat}{4}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{May}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\rowcolor[gray]{.8}[2pt][2pt]\textcolor{dark-gray}{28}&\textcolor{dark-gray}{29}&\textcolor{dark-gray}{30}&1&2&3&4\\
+5&6&7&8&9&10&11\\
+12&13&14&15&16&17&18\\
+19&20&21&22&23&24&25\\
+26&27&28&29&30&31&\textcolor{dark-gray}{1}\\
+\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{5}
+\renewcommand{\Mon}{6}
+\renewcommand{\Tue}{7}
+\renewcommand{\Wed}{8}
+\renewcommand{\Thr}{9}
+\renewcommand{\Fri}{10}
+\renewcommand{\Sat}{11}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{May}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{28}&\textcolor{dark-gray}{29}&\textcolor{dark-gray}{30}&1&2&3&4\\
+\rowcolor[gray]{.8}[2pt][2pt]5&6&7&8&9&10&11\\
+12&13&14&15&16&17&18\\
+19&20&21&22&23&24&25\\
+26&27&28&29&30&31&\textcolor{dark-gray}{1}\\
+\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{12}
+\renewcommand{\Mon}{13}
+\renewcommand{\Tue}{14}
+\renewcommand{\Wed}{15}
+\renewcommand{\Thr}{16}
+\renewcommand{\Fri}{17}
+\renewcommand{\Sat}{18}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{May}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{28}&\textcolor{dark-gray}{29}&\textcolor{dark-gray}{30}&1&2&3&4\\
+5&6&7&8&9&10&11\\
+\rowcolor[gray]{.8}[2pt][2pt]12&13&14&15&16&17&18\\
+19&20&21&22&23&24&25\\
+26&27&28&29&30&31&\textcolor{dark-gray}{1}\\
+\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{19}
+\renewcommand{\Mon}{20}
+\renewcommand{\Tue}{21}
+\renewcommand{\Wed}{22}
+\renewcommand{\Thr}{23}
+\renewcommand{\Fri}{24}
+\renewcommand{\Sat}{25}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{May}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{28}&\textcolor{dark-gray}{29}&\textcolor{dark-gray}{30}&1&2&3&4\\
+5&6&7&8&9&10&11\\
+12&13&14&15&16&17&18\\
+\rowcolor[gray]{.8}[2pt][2pt]19&20&21&22&23&24&25\\
+26&27&28&29&30&31&\textcolor{dark-gray}{1}\\
+\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{26}
+\renewcommand{\Mon}{27}
+\renewcommand{\Tue}{28}
+\renewcommand{\Wed}{29}
+\renewcommand{\Thr}{30}
+\renewcommand{\Fri}{31}
+\renewcommand{\Sat}{1}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{May}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{28}&\textcolor{dark-gray}{29}&\textcolor{dark-gray}{30}&1&2&3&4\\
+5&6&7&8&9&10&11\\
+12&13&14&15&16&17&18\\
+19&20&21&22&23&24&25\\
+\rowcolor[gray]{.8}[2pt][2pt]26&27&28&29&30&31&\textcolor{dark-gray}{1}\\
+\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+~\newpage
+\LARGE{}
+
+\vspace*{\fill}
+
+\begin{tabular*}{\textwidth}[p]{@{\hspace{215pt}}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{\extracolsep{38pt}}l}
+S & M & T & W & T & F & S &\\ 
+\cline{1-7}
+& & & \textcolor{Gray}{1}& \textcolor{Gray}{2}& \textcolor{Gray}{3}& \textcolor{Gray}{4}&\multirow{5}{*}{\begin{sideways}\textcolor{Gray}{~~~~May}\end{sideways}}\\
+\textcolor{Gray}{5}& \textcolor{Gray}{6}& \textcolor{Gray}{7}& \textcolor{Gray}{8}& \textcolor{Gray}{9}& \textcolor{Gray}{10}& \textcolor{Gray}{11}& \\
+\textcolor{Gray}{12}& \textcolor{Gray}{13}& \textcolor{Gray}{14}& \textcolor{Gray}{15}& \textcolor{Gray}{16}& \textcolor{Gray}{17}& \textcolor{Gray}{18}& \\
+\textcolor{Gray}{19}& \textcolor{Gray}{20}& \textcolor{Gray}{21}& \textcolor{Gray}{22}& \textcolor{Gray}{23}& \textcolor{Gray}{24}& \textcolor{Gray}{25}& \\
+\textcolor{Gray}{26}& \textcolor{Gray}{27}& \textcolor{Gray}{28}& \textcolor{Gray}{29}& \textcolor{Gray}{30}& \textcolor{Gray}{31}& \textbf{1}&\multirow{5}{*}{\begin{sideways}\textbf{June}\end{sideways}}\\
+\textbf{2}& \textbf{3}& \textbf{4}& \textbf{5}& \textbf{6}& \textbf{7}& \textbf{8}& \\
+\textbf{9}& \textbf{10}& \textbf{11}& \textbf{12}& \textbf{13}& \textbf{14}& \textbf{15}& \\
+\textbf{16}& \textbf{17}& \textbf{18}& \textbf{19}& \textbf{20}& \textbf{21}& \textbf{22}& \\
+\textbf{23}& \textbf{24}& \textbf{25}& \textbf{26}& \textbf{27}& \textbf{28}& \textbf{29}& \\
+\textbf{30}& \textcolor{Gray}{1}& \textcolor{Gray}{2}& \textcolor{Gray}{3}& \textcolor{Gray}{4}& \textcolor{Gray}{5}& \textcolor{Gray}{6}&\multirow{5}{*}{\begin{sideways}\textcolor{Gray}{July~~~~}\end{sideways}}\\
+\textcolor{Gray}{7}& \textcolor{Gray}{8}& \textcolor{Gray}{9}& \textcolor{Gray}{10}& \textcolor{Gray}{11}& \textcolor{Gray}{12}& \textcolor{Gray}{13}& \\
+\textcolor{Gray}{14}& \textcolor{Gray}{15}& \textcolor{Gray}{16}& \textcolor{Gray}{17}& \textcolor{Gray}{18}& \textcolor{Gray}{19}& \textcolor{Gray}{20}& \\
+\textcolor{Gray}{21}& \textcolor{Gray}{22}& \textcolor{Gray}{23}& \textcolor{Gray}{24}& \textcolor{Gray}{25}& \textcolor{Gray}{26}& \textcolor{Gray}{27}& \\
+\textcolor{Gray}{28}& \textcolor{Gray}{29}& \textcolor{Gray}{30}& \textcolor{Gray}{31}& 
+\end{tabular*}
+
+\vspace*{\fill}
+
+\normalsize{}
+
+\newpage
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{2}
+\renewcommand{\Mon}{3}
+\renewcommand{\Tue}{4}
+\renewcommand{\Wed}{5}
+\renewcommand{\Thr}{6}
+\renewcommand{\Fri}{7}
+\renewcommand{\Sat}{8}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{June}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{26}&\textcolor{dark-gray}{27}&\textcolor{dark-gray}{28}&\textcolor{dark-gray}{29}&\textcolor{dark-gray}{30}&\textcolor{dark-gray}{31}&1\\
+\rowcolor[gray]{.8}[2pt][2pt]2&3&4&5&6&7&8\\
+9&10&11&12&13&14&15\\
+16&17&18&19&20&21&22\\
+23&24&25&26&27&28&29\\
+30&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{9}
+\renewcommand{\Mon}{10}
+\renewcommand{\Tue}{11}
+\renewcommand{\Wed}{12}
+\renewcommand{\Thr}{13}
+\renewcommand{\Fri}{14}
+\renewcommand{\Sat}{15}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{June}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{26}&\textcolor{dark-gray}{27}&\textcolor{dark-gray}{28}&\textcolor{dark-gray}{29}&\textcolor{dark-gray}{30}&\textcolor{dark-gray}{31}&1\\
+2&3&4&5&6&7&8\\
+\rowcolor[gray]{.8}[2pt][2pt]9&10&11&12&13&14&15\\
+16&17&18&19&20&21&22\\
+23&24&25&26&27&28&29\\
+30&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{16}
+\renewcommand{\Mon}{17}
+\renewcommand{\Tue}{18}
+\renewcommand{\Wed}{19}
+\renewcommand{\Thr}{20}
+\renewcommand{\Fri}{21}
+\renewcommand{\Sat}{22}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{June}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{26}&\textcolor{dark-gray}{27}&\textcolor{dark-gray}{28}&\textcolor{dark-gray}{29}&\textcolor{dark-gray}{30}&\textcolor{dark-gray}{31}&1\\
+2&3&4&5&6&7&8\\
+9&10&11&12&13&14&15\\
+\rowcolor[gray]{.8}[2pt][2pt]16&17&18&19&20&21&22\\
+23&24&25&26&27&28&29\\
+30&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{23}
+\renewcommand{\Mon}{24}
+\renewcommand{\Tue}{25}
+\renewcommand{\Wed}{26}
+\renewcommand{\Thr}{27}
+\renewcommand{\Fri}{28}
+\renewcommand{\Sat}{29}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{June}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{26}&\textcolor{dark-gray}{27}&\textcolor{dark-gray}{28}&\textcolor{dark-gray}{29}&\textcolor{dark-gray}{30}&\textcolor{dark-gray}{31}&1\\
+2&3&4&5&6&7&8\\
+9&10&11&12&13&14&15\\
+16&17&18&19&20&21&22\\
+\rowcolor[gray]{.8}[2pt][2pt]23&24&25&26&27&28&29\\
+30&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+~\newpage
+\LARGE{}
+
+\vspace*{\fill}
+
+\begin{tabular*}{\textwidth}[p]{@{\hspace{215pt}}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{\extracolsep{38pt}}l}
+S & M & T & W & T & F & S &\\ 
+\cline{1-7}
+& & & & & & \textcolor{Gray}{1}&\multirow{5}{*}{\begin{sideways}\textcolor{Gray}{~~~~June}\end{sideways}}\\
+\textcolor{Gray}{2}& \textcolor{Gray}{3}& \textcolor{Gray}{4}& \textcolor{Gray}{5}& \textcolor{Gray}{6}& \textcolor{Gray}{7}& \textcolor{Gray}{8}& \\
+\textcolor{Gray}{9}& \textcolor{Gray}{10}& \textcolor{Gray}{11}& \textcolor{Gray}{12}& \textcolor{Gray}{13}& \textcolor{Gray}{14}& \textcolor{Gray}{15}& \\
+\textcolor{Gray}{16}& \textcolor{Gray}{17}& \textcolor{Gray}{18}& \textcolor{Gray}{19}& \textcolor{Gray}{20}& \textcolor{Gray}{21}& \textcolor{Gray}{22}& \\
+\textcolor{Gray}{23}& \textcolor{Gray}{24}& \textcolor{Gray}{25}& \textcolor{Gray}{26}& \textcolor{Gray}{27}& \textcolor{Gray}{28}& \textcolor{Gray}{29}& \\
+\textcolor{Gray}{30}& \textbf{1}& \textbf{2}& \textbf{3}& \textbf{4}& \textbf{5}& \textbf{6}&\multirow{5}{*}{\begin{sideways}\textbf{July}\end{sideways}}\\
+\textbf{7}& \textbf{8}& \textbf{9}& \textbf{10}& \textbf{11}& \textbf{12}& \textbf{13}& \\
+\textbf{14}& \textbf{15}& \textbf{16}& \textbf{17}& \textbf{18}& \textbf{19}& \textbf{20}& \\
+\textbf{21}& \textbf{22}& \textbf{23}& \textbf{24}& \textbf{25}& \textbf{26}& \textbf{27}& \\
+\textbf{28}& \textbf{29}& \textbf{30}& \textbf{31}& \textcolor{Gray}{1}& \textcolor{Gray}{2}& \textcolor{Gray}{3}&\multirow{5}{*}{\begin{sideways}\textcolor{Gray}{August~~~~}\end{sideways}}\\
+\textcolor{Gray}{4}& \textcolor{Gray}{5}& \textcolor{Gray}{6}& \textcolor{Gray}{7}& \textcolor{Gray}{8}& \textcolor{Gray}{9}& \textcolor{Gray}{10}& \\
+\textcolor{Gray}{11}& \textcolor{Gray}{12}& \textcolor{Gray}{13}& \textcolor{Gray}{14}& \textcolor{Gray}{15}& \textcolor{Gray}{16}& \textcolor{Gray}{17}& \\
+\textcolor{Gray}{18}& \textcolor{Gray}{19}& \textcolor{Gray}{20}& \textcolor{Gray}{21}& \textcolor{Gray}{22}& \textcolor{Gray}{23}& \textcolor{Gray}{24}& \\
+\textcolor{Gray}{25}& \textcolor{Gray}{26}& \textcolor{Gray}{27}& \textcolor{Gray}{28}& \textcolor{Gray}{29}& \textcolor{Gray}{30}& \textcolor{Gray}{31}& \\
+
+\end{tabular*}
+
+\vspace*{\fill}
+
+\normalsize{}
+
+\newpage
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{30}
+\renewcommand{\Mon}{1}
+\renewcommand{\Tue}{2}
+\renewcommand{\Wed}{3}
+\renewcommand{\Thr}{4}
+\renewcommand{\Fri}{5}
+\renewcommand{\Sat}{6}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{July}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\rowcolor[gray]{.8}[2pt][2pt]\textcolor{dark-gray}{30}&1&2&3&4&5&6\\
+7&8&9&10&11&12&13\\
+14&15&16&17&18&19&20\\
+21&22&23&24&25&26&27\\
+28&29&30&31&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}\\
+\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}&\textcolor{dark-gray}{10}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{7}
+\renewcommand{\Mon}{8}
+\renewcommand{\Tue}{9}
+\renewcommand{\Wed}{10}
+\renewcommand{\Thr}{11}
+\renewcommand{\Fri}{12}
+\renewcommand{\Sat}{13}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{July}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{30}&1&2&3&4&5&6\\
+\rowcolor[gray]{.8}[2pt][2pt]7&8&9&10&11&12&13\\
+14&15&16&17&18&19&20\\
+21&22&23&24&25&26&27\\
+28&29&30&31&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}\\
+\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}&\textcolor{dark-gray}{10}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{14}
+\renewcommand{\Mon}{15}
+\renewcommand{\Tue}{16}
+\renewcommand{\Wed}{17}
+\renewcommand{\Thr}{18}
+\renewcommand{\Fri}{19}
+\renewcommand{\Sat}{20}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{July}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{30}&1&2&3&4&5&6\\
+7&8&9&10&11&12&13\\
+\rowcolor[gray]{.8}[2pt][2pt]14&15&16&17&18&19&20\\
+21&22&23&24&25&26&27\\
+28&29&30&31&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}\\
+\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}&\textcolor{dark-gray}{10}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{21}
+\renewcommand{\Mon}{22}
+\renewcommand{\Tue}{23}
+\renewcommand{\Wed}{24}
+\renewcommand{\Thr}{25}
+\renewcommand{\Fri}{26}
+\renewcommand{\Sat}{27}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{July}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{30}&1&2&3&4&5&6\\
+7&8&9&10&11&12&13\\
+14&15&16&17&18&19&20\\
+\rowcolor[gray]{.8}[2pt][2pt]21&22&23&24&25&26&27\\
+28&29&30&31&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}\\
+\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}&\textcolor{dark-gray}{10}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{28}
+\renewcommand{\Mon}{29}
+\renewcommand{\Tue}{30}
+\renewcommand{\Wed}{31}
+\renewcommand{\Thr}{1}
+\renewcommand{\Fri}{2}
+\renewcommand{\Sat}{3}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{July}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{30}&1&2&3&4&5&6\\
+7&8&9&10&11&12&13\\
+14&15&16&17&18&19&20\\
+21&22&23&24&25&26&27\\
+\rowcolor[gray]{.8}[2pt][2pt]28&29&30&31&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}\\
+\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}&\textcolor{dark-gray}{10}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+~\newpage
+\LARGE{}
+
+\vspace*{\fill}
+
+\begin{tabular*}{\textwidth}[p]{@{\hspace{215pt}}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{\extracolsep{38pt}}l}
+S & M & T & W & T & F & S &\\ 
+\cline{1-7}
+& \textcolor{Gray}{1}& \textcolor{Gray}{2}& \textcolor{Gray}{3}& \textcolor{Gray}{4}& \textcolor{Gray}{5}& \textcolor{Gray}{6}&\multirow{5}{*}{\begin{sideways}\textcolor{Gray}{~~~~July}\end{sideways}}\\
+\textcolor{Gray}{7}& \textcolor{Gray}{8}& \textcolor{Gray}{9}& \textcolor{Gray}{10}& \textcolor{Gray}{11}& \textcolor{Gray}{12}& \textcolor{Gray}{13}& \\
+\textcolor{Gray}{14}& \textcolor{Gray}{15}& \textcolor{Gray}{16}& \textcolor{Gray}{17}& \textcolor{Gray}{18}& \textcolor{Gray}{19}& \textcolor{Gray}{20}& \\
+\textcolor{Gray}{21}& \textcolor{Gray}{22}& \textcolor{Gray}{23}& \textcolor{Gray}{24}& \textcolor{Gray}{25}& \textcolor{Gray}{26}& \textcolor{Gray}{27}& \\
+\textcolor{Gray}{28}& \textcolor{Gray}{29}& \textcolor{Gray}{30}& \textcolor{Gray}{31}& \textbf{1}& \textbf{2}& \textbf{3}&\multirow{5}{*}{\begin{sideways}\textbf{August}\end{sideways}}\\
+\textbf{4}& \textbf{5}& \textbf{6}& \textbf{7}& \textbf{8}& \textbf{9}& \textbf{10}& \\
+\textbf{11}& \textbf{12}& \textbf{13}& \textbf{14}& \textbf{15}& \textbf{16}& \textbf{17}& \\
+\textbf{18}& \textbf{19}& \textbf{20}& \textbf{21}& \textbf{22}& \textbf{23}& \textbf{24}& \\
+\textbf{25}& \textbf{26}& \textbf{27}& \textbf{28}& \textbf{29}& \textbf{30}& \textbf{31}& \\
+\textcolor{Gray}{1}& \textcolor{Gray}{2}& \textcolor{Gray}{3}& \textcolor{Gray}{4}& \textcolor{Gray}{5}& \textcolor{Gray}{6}& \textcolor{Gray}{7}&\multirow{5}{*}{\begin{sideways}\textcolor{Gray}{September~~~~}\end{sideways}}\\
+\textcolor{Gray}{8}& \textcolor{Gray}{9}& \textcolor{Gray}{10}& \textcolor{Gray}{11}& \textcolor{Gray}{12}& \textcolor{Gray}{13}& \textcolor{Gray}{14}& \\
+\textcolor{Gray}{15}& \textcolor{Gray}{16}& \textcolor{Gray}{17}& \textcolor{Gray}{18}& \textcolor{Gray}{19}& \textcolor{Gray}{20}& \textcolor{Gray}{21}& \\
+\textcolor{Gray}{22}& \textcolor{Gray}{23}& \textcolor{Gray}{24}& \textcolor{Gray}{25}& \textcolor{Gray}{26}& \textcolor{Gray}{27}& \textcolor{Gray}{28}& \\
+\textcolor{Gray}{29}& \textcolor{Gray}{30}& 
+\end{tabular*}
+
+\vspace*{\fill}
+
+\normalsize{}
+
+\newpage
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{4}
+\renewcommand{\Mon}{5}
+\renewcommand{\Tue}{6}
+\renewcommand{\Wed}{7}
+\renewcommand{\Thr}{8}
+\renewcommand{\Fri}{9}
+\renewcommand{\Sat}{10}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{August}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{28}&\textcolor{dark-gray}{29}&\textcolor{dark-gray}{30}&\textcolor{dark-gray}{31}&1&2&3\\
+\rowcolor[gray]{.8}[2pt][2pt]4&5&6&7&8&9&10\\
+11&12&13&14&15&16&17\\
+18&19&20&21&22&23&24\\
+25&26&27&28&29&30&31\\
+\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{11}
+\renewcommand{\Mon}{12}
+\renewcommand{\Tue}{13}
+\renewcommand{\Wed}{14}
+\renewcommand{\Thr}{15}
+\renewcommand{\Fri}{16}
+\renewcommand{\Sat}{17}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{August}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{28}&\textcolor{dark-gray}{29}&\textcolor{dark-gray}{30}&\textcolor{dark-gray}{31}&1&2&3\\
+4&5&6&7&8&9&10\\
+\rowcolor[gray]{.8}[2pt][2pt]11&12&13&14&15&16&17\\
+18&19&20&21&22&23&24\\
+25&26&27&28&29&30&31\\
+\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{18}
+\renewcommand{\Mon}{19}
+\renewcommand{\Tue}{20}
+\renewcommand{\Wed}{21}
+\renewcommand{\Thr}{22}
+\renewcommand{\Fri}{23}
+\renewcommand{\Sat}{24}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{August}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{28}&\textcolor{dark-gray}{29}&\textcolor{dark-gray}{30}&\textcolor{dark-gray}{31}&1&2&3\\
+4&5&6&7&8&9&10\\
+11&12&13&14&15&16&17\\
+\rowcolor[gray]{.8}[2pt][2pt]18&19&20&21&22&23&24\\
+25&26&27&28&29&30&31\\
+\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{25}
+\renewcommand{\Mon}{26}
+\renewcommand{\Tue}{27}
+\renewcommand{\Wed}{28}
+\renewcommand{\Thr}{29}
+\renewcommand{\Fri}{30}
+\renewcommand{\Sat}{31}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{August}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{28}&\textcolor{dark-gray}{29}&\textcolor{dark-gray}{30}&\textcolor{dark-gray}{31}&1&2&3\\
+4&5&6&7&8&9&10\\
+11&12&13&14&15&16&17\\
+18&19&20&21&22&23&24\\
+\rowcolor[gray]{.8}[2pt][2pt]25&26&27&28&29&30&31\\
+\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+~\newpage
+\LARGE{}
+
+\vspace*{\fill}
+
+\begin{tabular*}{\textwidth}[p]{@{\hspace{215pt}}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{\extracolsep{38pt}}l}
+S & M & T & W & T & F & S &\\ 
+\cline{1-7}
+& & & & \textcolor{Gray}{1}& \textcolor{Gray}{2}& \textcolor{Gray}{3}&\multirow{5}{*}{\begin{sideways}\textcolor{Gray}{~~~~August}\end{sideways}}\\
+\textcolor{Gray}{4}& \textcolor{Gray}{5}& \textcolor{Gray}{6}& \textcolor{Gray}{7}& \textcolor{Gray}{8}& \textcolor{Gray}{9}& \textcolor{Gray}{10}& \\
+\textcolor{Gray}{11}& \textcolor{Gray}{12}& \textcolor{Gray}{13}& \textcolor{Gray}{14}& \textcolor{Gray}{15}& \textcolor{Gray}{16}& \textcolor{Gray}{17}& \\
+\textcolor{Gray}{18}& \textcolor{Gray}{19}& \textcolor{Gray}{20}& \textcolor{Gray}{21}& \textcolor{Gray}{22}& \textcolor{Gray}{23}& \textcolor{Gray}{24}& \\
+\textcolor{Gray}{25}& \textcolor{Gray}{26}& \textcolor{Gray}{27}& \textcolor{Gray}{28}& \textcolor{Gray}{29}& \textcolor{Gray}{30}& \textcolor{Gray}{31}& \\
+\textbf{1}& \textbf{2}& \textbf{3}& \textbf{4}& \textbf{5}& \textbf{6}& \textbf{7}&\multirow{5}{*}{\begin{sideways}\textbf{September}\end{sideways}}\\
+\textbf{8}& \textbf{9}& \textbf{10}& \textbf{11}& \textbf{12}& \textbf{13}& \textbf{14}& \\
+\textbf{15}& \textbf{16}& \textbf{17}& \textbf{18}& \textbf{19}& \textbf{20}& \textbf{21}& \\
+\textbf{22}& \textbf{23}& \textbf{24}& \textbf{25}& \textbf{26}& \textbf{27}& \textbf{28}& \\
+\textbf{29}& \textbf{30}& \textcolor{Gray}{1}& \textcolor{Gray}{2}& \textcolor{Gray}{3}& \textcolor{Gray}{4}& \textcolor{Gray}{5}&\multirow{5}{*}{\begin{sideways}\textcolor{Gray}{October~~~~}\end{sideways}}\\
+\textcolor{Gray}{6}& \textcolor{Gray}{7}& \textcolor{Gray}{8}& \textcolor{Gray}{9}& \textcolor{Gray}{10}& \textcolor{Gray}{11}& \textcolor{Gray}{12}& \\
+\textcolor{Gray}{13}& \textcolor{Gray}{14}& \textcolor{Gray}{15}& \textcolor{Gray}{16}& \textcolor{Gray}{17}& \textcolor{Gray}{18}& \textcolor{Gray}{19}& \\
+\textcolor{Gray}{20}& \textcolor{Gray}{21}& \textcolor{Gray}{22}& \textcolor{Gray}{23}& \textcolor{Gray}{24}& \textcolor{Gray}{25}& \textcolor{Gray}{26}& \\
+\textcolor{Gray}{27}& \textcolor{Gray}{28}& \textcolor{Gray}{29}& \textcolor{Gray}{30}& \textcolor{Gray}{31}& 
+\end{tabular*}
+
+\vspace*{\fill}
+
+\normalsize{}
+
+\newpage
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{1}
+\renewcommand{\Mon}{2}
+\renewcommand{\Tue}{3}
+\renewcommand{\Wed}{4}
+\renewcommand{\Thr}{5}
+\renewcommand{\Fri}{6}
+\renewcommand{\Sat}{7}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{September}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\rowcolor[gray]{.8}[2pt][2pt]1&2&3&4&5&6&7\\
+8&9&10&11&12&13&14\\
+15&16&17&18&19&20&21\\
+22&23&24&25&26&27&28\\
+29&30&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}\\
+\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}&\textcolor{dark-gray}{10}&\textcolor{dark-gray}{11}&\textcolor{dark-gray}{12}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{8}
+\renewcommand{\Mon}{9}
+\renewcommand{\Tue}{10}
+\renewcommand{\Wed}{11}
+\renewcommand{\Thr}{12}
+\renewcommand{\Fri}{13}
+\renewcommand{\Sat}{14}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{September}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+1&2&3&4&5&6&7\\
+\rowcolor[gray]{.8}[2pt][2pt]8&9&10&11&12&13&14\\
+15&16&17&18&19&20&21\\
+22&23&24&25&26&27&28\\
+29&30&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}\\
+\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}&\textcolor{dark-gray}{10}&\textcolor{dark-gray}{11}&\textcolor{dark-gray}{12}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{15}
+\renewcommand{\Mon}{16}
+\renewcommand{\Tue}{17}
+\renewcommand{\Wed}{18}
+\renewcommand{\Thr}{19}
+\renewcommand{\Fri}{20}
+\renewcommand{\Sat}{21}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{September}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+1&2&3&4&5&6&7\\
+8&9&10&11&12&13&14\\
+\rowcolor[gray]{.8}[2pt][2pt]15&16&17&18&19&20&21\\
+22&23&24&25&26&27&28\\
+29&30&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}\\
+\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}&\textcolor{dark-gray}{10}&\textcolor{dark-gray}{11}&\textcolor{dark-gray}{12}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{22}
+\renewcommand{\Mon}{23}
+\renewcommand{\Tue}{24}
+\renewcommand{\Wed}{25}
+\renewcommand{\Thr}{26}
+\renewcommand{\Fri}{27}
+\renewcommand{\Sat}{28}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{September}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+1&2&3&4&5&6&7\\
+8&9&10&11&12&13&14\\
+15&16&17&18&19&20&21\\
+\rowcolor[gray]{.8}[2pt][2pt]22&23&24&25&26&27&28\\
+29&30&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}\\
+\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}&\textcolor{dark-gray}{10}&\textcolor{dark-gray}{11}&\textcolor{dark-gray}{12}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+~\newpage
+\LARGE{}
+
+\vspace*{\fill}
+
+\begin{tabular*}{\textwidth}[p]{@{\hspace{215pt}}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{\extracolsep{38pt}}l}
+S & M & T & W & T & F & S &\\ 
+\cline{1-7}
+\textcolor{Gray}{1}& \textcolor{Gray}{2}& \textcolor{Gray}{3}& \textcolor{Gray}{4}& \textcolor{Gray}{5}& \textcolor{Gray}{6}& \textcolor{Gray}{7}&\multirow{5}{*}{\begin{sideways}\textcolor{Gray}{~~~~September}\end{sideways}}\\
+\textcolor{Gray}{8}& \textcolor{Gray}{9}& \textcolor{Gray}{10}& \textcolor{Gray}{11}& \textcolor{Gray}{12}& \textcolor{Gray}{13}& \textcolor{Gray}{14}& \\
+\textcolor{Gray}{15}& \textcolor{Gray}{16}& \textcolor{Gray}{17}& \textcolor{Gray}{18}& \textcolor{Gray}{19}& \textcolor{Gray}{20}& \textcolor{Gray}{21}& \\
+\textcolor{Gray}{22}& \textcolor{Gray}{23}& \textcolor{Gray}{24}& \textcolor{Gray}{25}& \textcolor{Gray}{26}& \textcolor{Gray}{27}& \textcolor{Gray}{28}& \\
+\textcolor{Gray}{29}& \textcolor{Gray}{30}& \textbf{1}& \textbf{2}& \textbf{3}& \textbf{4}& \textbf{5}&\multirow{5}{*}{\begin{sideways}\textbf{October}\end{sideways}}\\
+\textbf{6}& \textbf{7}& \textbf{8}& \textbf{9}& \textbf{10}& \textbf{11}& \textbf{12}& \\
+\textbf{13}& \textbf{14}& \textbf{15}& \textbf{16}& \textbf{17}& \textbf{18}& \textbf{19}& \\
+\textbf{20}& \textbf{21}& \textbf{22}& \textbf{23}& \textbf{24}& \textbf{25}& \textbf{26}& \\
+\textbf{27}& \textbf{28}& \textbf{29}& \textbf{30}& \textbf{31}& \textcolor{Gray}{1}& \textcolor{Gray}{2}&\multirow{5}{*}{\begin{sideways}\textcolor{Gray}{November~~~~}\end{sideways}}\\
+\textcolor{Gray}{3}& \textcolor{Gray}{4}& \textcolor{Gray}{5}& \textcolor{Gray}{6}& \textcolor{Gray}{7}& \textcolor{Gray}{8}& \textcolor{Gray}{9}& \\
+\textcolor{Gray}{10}& \textcolor{Gray}{11}& \textcolor{Gray}{12}& \textcolor{Gray}{13}& \textcolor{Gray}{14}& \textcolor{Gray}{15}& \textcolor{Gray}{16}& \\
+\textcolor{Gray}{17}& \textcolor{Gray}{18}& \textcolor{Gray}{19}& \textcolor{Gray}{20}& \textcolor{Gray}{21}& \textcolor{Gray}{22}& \textcolor{Gray}{23}& \\
+\textcolor{Gray}{24}& \textcolor{Gray}{25}& \textcolor{Gray}{26}& \textcolor{Gray}{27}& \textcolor{Gray}{28}& \textcolor{Gray}{29}& \textcolor{Gray}{30}& \\
+
+\end{tabular*}
+
+\vspace*{\fill}
+
+\normalsize{}
+
+\newpage
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{29}
+\renewcommand{\Mon}{30}
+\renewcommand{\Tue}{1}
+\renewcommand{\Wed}{2}
+\renewcommand{\Thr}{3}
+\renewcommand{\Fri}{4}
+\renewcommand{\Sat}{5}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{October}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\rowcolor[gray]{.8}[2pt][2pt]\textcolor{dark-gray}{29}&\textcolor{dark-gray}{30}&1&2&3&4&5\\
+6&7&8&9&10&11&12\\
+13&14&15&16&17&18&19\\
+20&21&22&23&24&25&26\\
+27&28&29&30&31&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}\\
+\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{6}
+\renewcommand{\Mon}{7}
+\renewcommand{\Tue}{8}
+\renewcommand{\Wed}{9}
+\renewcommand{\Thr}{10}
+\renewcommand{\Fri}{11}
+\renewcommand{\Sat}{12}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{October}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{29}&\textcolor{dark-gray}{30}&1&2&3&4&5\\
+\rowcolor[gray]{.8}[2pt][2pt]6&7&8&9&10&11&12\\
+13&14&15&16&17&18&19\\
+20&21&22&23&24&25&26\\
+27&28&29&30&31&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}\\
+\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{13}
+\renewcommand{\Mon}{14}
+\renewcommand{\Tue}{15}
+\renewcommand{\Wed}{16}
+\renewcommand{\Thr}{17}
+\renewcommand{\Fri}{18}
+\renewcommand{\Sat}{19}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{October}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{29}&\textcolor{dark-gray}{30}&1&2&3&4&5\\
+6&7&8&9&10&11&12\\
+\rowcolor[gray]{.8}[2pt][2pt]13&14&15&16&17&18&19\\
+20&21&22&23&24&25&26\\
+27&28&29&30&31&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}\\
+\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{20}
+\renewcommand{\Mon}{21}
+\renewcommand{\Tue}{22}
+\renewcommand{\Wed}{23}
+\renewcommand{\Thr}{24}
+\renewcommand{\Fri}{25}
+\renewcommand{\Sat}{26}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{October}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{29}&\textcolor{dark-gray}{30}&1&2&3&4&5\\
+6&7&8&9&10&11&12\\
+13&14&15&16&17&18&19\\
+\rowcolor[gray]{.8}[2pt][2pt]20&21&22&23&24&25&26\\
+27&28&29&30&31&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}\\
+\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{27}
+\renewcommand{\Mon}{28}
+\renewcommand{\Tue}{29}
+\renewcommand{\Wed}{30}
+\renewcommand{\Thr}{31}
+\renewcommand{\Fri}{1}
+\renewcommand{\Sat}{2}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{October}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{29}&\textcolor{dark-gray}{30}&1&2&3&4&5\\
+6&7&8&9&10&11&12\\
+13&14&15&16&17&18&19\\
+20&21&22&23&24&25&26\\
+\rowcolor[gray]{.8}[2pt][2pt]27&28&29&30&31&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}\\
+\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+~\newpage
+\LARGE{}
+
+\vspace*{\fill}
+
+\begin{tabular*}{\textwidth}[p]{@{\hspace{215pt}}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{\extracolsep{38pt}}l}
+S & M & T & W & T & F & S &\\ 
+\cline{1-7}
+& & \textcolor{Gray}{1}& \textcolor{Gray}{2}& \textcolor{Gray}{3}& \textcolor{Gray}{4}& \textcolor{Gray}{5}&\multirow{5}{*}{\begin{sideways}\textcolor{Gray}{~~~~October}\end{sideways}}\\
+\textcolor{Gray}{6}& \textcolor{Gray}{7}& \textcolor{Gray}{8}& \textcolor{Gray}{9}& \textcolor{Gray}{10}& \textcolor{Gray}{11}& \textcolor{Gray}{12}& \\
+\textcolor{Gray}{13}& \textcolor{Gray}{14}& \textcolor{Gray}{15}& \textcolor{Gray}{16}& \textcolor{Gray}{17}& \textcolor{Gray}{18}& \textcolor{Gray}{19}& \\
+\textcolor{Gray}{20}& \textcolor{Gray}{21}& \textcolor{Gray}{22}& \textcolor{Gray}{23}& \textcolor{Gray}{24}& \textcolor{Gray}{25}& \textcolor{Gray}{26}& \\
+\textcolor{Gray}{27}& \textcolor{Gray}{28}& \textcolor{Gray}{29}& \textcolor{Gray}{30}& \textcolor{Gray}{31}& \textbf{1}& \textbf{2}&\multirow{5}{*}{\begin{sideways}\textbf{November}\end{sideways}}\\
+\textbf{3}& \textbf{4}& \textbf{5}& \textbf{6}& \textbf{7}& \textbf{8}& \textbf{9}& \\
+\textbf{10}& \textbf{11}& \textbf{12}& \textbf{13}& \textbf{14}& \textbf{15}& \textbf{16}& \\
+\textbf{17}& \textbf{18}& \textbf{19}& \textbf{20}& \textbf{21}& \textbf{22}& \textbf{23}& \\
+\textbf{24}& \textbf{25}& \textbf{26}& \textbf{27}& \textbf{28}& \textbf{29}& \textbf{30}& \\
+\textcolor{Gray}{1}& \textcolor{Gray}{2}& \textcolor{Gray}{3}& \textcolor{Gray}{4}& \textcolor{Gray}{5}& \textcolor{Gray}{6}& \textcolor{Gray}{7}&\multirow{5}{*}{\begin{sideways}\textcolor{Gray}{December~~~~}\end{sideways}}\\
+\textcolor{Gray}{8}& \textcolor{Gray}{9}& \textcolor{Gray}{10}& \textcolor{Gray}{11}& \textcolor{Gray}{12}& \textcolor{Gray}{13}& \textcolor{Gray}{14}& \\
+\textcolor{Gray}{15}& \textcolor{Gray}{16}& \textcolor{Gray}{17}& \textcolor{Gray}{18}& \textcolor{Gray}{19}& \textcolor{Gray}{20}& \textcolor{Gray}{21}& \\
+\textcolor{Gray}{22}& \textcolor{Gray}{23}& \textcolor{Gray}{24}& \textcolor{Gray}{25}& \textcolor{Gray}{26}& \textcolor{Gray}{27}& \textcolor{Gray}{28}& \\
+\textcolor{Gray}{29}& \textcolor{Gray}{30}& \textcolor{Gray}{31}& 
+\end{tabular*}
+
+\vspace*{\fill}
+
+\normalsize{}
+
+\newpage
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{3}
+\renewcommand{\Mon}{4}
+\renewcommand{\Tue}{5}
+\renewcommand{\Wed}{6}
+\renewcommand{\Thr}{7}
+\renewcommand{\Fri}{8}
+\renewcommand{\Sat}{9}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{November}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{27}&\textcolor{dark-gray}{28}&\textcolor{dark-gray}{29}&\textcolor{dark-gray}{30}&\textcolor{dark-gray}{31}&1&2\\
+\rowcolor[gray]{.8}[2pt][2pt]3&4&5&6&7&8&9\\
+10&11&12&13&14&15&16\\
+17&18&19&20&21&22&23\\
+24&25&26&27&28&29&30\\
+\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{10}
+\renewcommand{\Mon}{11}
+\renewcommand{\Tue}{12}
+\renewcommand{\Wed}{13}
+\renewcommand{\Thr}{14}
+\renewcommand{\Fri}{15}
+\renewcommand{\Sat}{16}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{November}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{27}&\textcolor{dark-gray}{28}&\textcolor{dark-gray}{29}&\textcolor{dark-gray}{30}&\textcolor{dark-gray}{31}&1&2\\
+3&4&5&6&7&8&9\\
+\rowcolor[gray]{.8}[2pt][2pt]10&11&12&13&14&15&16\\
+17&18&19&20&21&22&23\\
+24&25&26&27&28&29&30\\
+\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{17}
+\renewcommand{\Mon}{18}
+\renewcommand{\Tue}{19}
+\renewcommand{\Wed}{20}
+\renewcommand{\Thr}{21}
+\renewcommand{\Fri}{22}
+\renewcommand{\Sat}{23}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{November}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{27}&\textcolor{dark-gray}{28}&\textcolor{dark-gray}{29}&\textcolor{dark-gray}{30}&\textcolor{dark-gray}{31}&1&2\\
+3&4&5&6&7&8&9\\
+10&11&12&13&14&15&16\\
+\rowcolor[gray]{.8}[2pt][2pt]17&18&19&20&21&22&23\\
+24&25&26&27&28&29&30\\
+\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{24}
+\renewcommand{\Mon}{25}
+\renewcommand{\Tue}{26}
+\renewcommand{\Wed}{27}
+\renewcommand{\Thr}{28}
+\renewcommand{\Fri}{29}
+\renewcommand{\Sat}{30}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{November}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\textcolor{dark-gray}{27}&\textcolor{dark-gray}{28}&\textcolor{dark-gray}{29}&\textcolor{dark-gray}{30}&\textcolor{dark-gray}{31}&1&2\\
+3&4&5&6&7&8&9\\
+10&11&12&13&14&15&16\\
+17&18&19&20&21&22&23\\
+\rowcolor[gray]{.8}[2pt][2pt]24&25&26&27&28&29&30\\
+\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}&\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+~\newpage
+\LARGE{}
+
+\vspace*{\fill}
+
+\begin{tabular*}{\textwidth}[p]{@{\hspace{215pt}}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{\extracolsep{38pt}}l}
+S & M & T & W & T & F & S &\\ 
+\cline{1-7}
+& & & & & \textcolor{Gray}{1}& \textcolor{Gray}{2}&\multirow{5}{*}{\begin{sideways}\textcolor{Gray}{~~~~November}\end{sideways}}\\
+\textcolor{Gray}{3}& \textcolor{Gray}{4}& \textcolor{Gray}{5}& \textcolor{Gray}{6}& \textcolor{Gray}{7}& \textcolor{Gray}{8}& \textcolor{Gray}{9}& \\
+\textcolor{Gray}{10}& \textcolor{Gray}{11}& \textcolor{Gray}{12}& \textcolor{Gray}{13}& \textcolor{Gray}{14}& \textcolor{Gray}{15}& \textcolor{Gray}{16}& \\
+\textcolor{Gray}{17}& \textcolor{Gray}{18}& \textcolor{Gray}{19}& \textcolor{Gray}{20}& \textcolor{Gray}{21}& \textcolor{Gray}{22}& \textcolor{Gray}{23}& \\
+\textcolor{Gray}{24}& \textcolor{Gray}{25}& \textcolor{Gray}{26}& \textcolor{Gray}{27}& \textcolor{Gray}{28}& \textcolor{Gray}{29}& \textcolor{Gray}{30}& \\
+\textbf{1}& \textbf{2}& \textbf{3}& \textbf{4}& \textbf{5}& \textbf{6}& \textbf{7}&\multirow{5}{*}{\begin{sideways}\textbf{December}\end{sideways}}\\
+\textbf{8}& \textbf{9}& \textbf{10}& \textbf{11}& \textbf{12}& \textbf{13}& \textbf{14}& \\
+\textbf{15}& \textbf{16}& \textbf{17}& \textbf{18}& \textbf{19}& \textbf{20}& \textbf{21}& \\
+\textbf{22}& \textbf{23}& \textbf{24}& \textbf{25}& \textbf{26}& \textbf{27}& \textbf{28}& \\
+\textbf{29}& \textbf{30}& \textbf{31}& \textcolor{Gray}{1}& \textcolor{Gray}{2}& \textcolor{Gray}{3}& \textcolor{Gray}{4}&\multirow{5}{*}{\begin{sideways}\textcolor{Gray}{January~~~~}\end{sideways}}\\
+\textcolor{Gray}{5}& \textcolor{Gray}{6}& \textcolor{Gray}{7}& \textcolor{Gray}{8}& \textcolor{Gray}{9}& \textcolor{Gray}{10}& \textcolor{Gray}{11}& \\
+\textcolor{Gray}{12}& \textcolor{Gray}{13}& \textcolor{Gray}{14}& \textcolor{Gray}{15}& \textcolor{Gray}{16}& \textcolor{Gray}{17}& \textcolor{Gray}{18}& \\
+\textcolor{Gray}{19}& \textcolor{Gray}{20}& \textcolor{Gray}{21}& \textcolor{Gray}{22}& \textcolor{Gray}{23}& \textcolor{Gray}{24}& \textcolor{Gray}{25}& \\
+\textcolor{Gray}{26}& \textcolor{Gray}{27}& \textcolor{Gray}{28}& \textcolor{Gray}{29}& \textcolor{Gray}{30}& \textcolor{Gray}{31}& 
+\end{tabular*}
+
+\vspace*{\fill}
+
+\normalsize{}
+
+\newpage
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{1}
+\renewcommand{\Mon}{2}
+\renewcommand{\Tue}{3}
+\renewcommand{\Wed}{4}
+\renewcommand{\Thr}{5}
+\renewcommand{\Fri}{6}
+\renewcommand{\Sat}{7}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{December}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+\rowcolor[gray]{.8}[2pt][2pt]1&2&3&4&5&6&7\\
+8&9&10&11&12&13&14\\
+15&16&17&18&19&20&21\\
+22&23&24&25&26&27&28\\
+29&30&31&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}\\
+\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}&\textcolor{dark-gray}{10}&\textcolor{dark-gray}{11}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{8}
+\renewcommand{\Mon}{9}
+\renewcommand{\Tue}{10}
+\renewcommand{\Wed}{11}
+\renewcommand{\Thr}{12}
+\renewcommand{\Fri}{13}
+\renewcommand{\Sat}{14}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{December}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+1&2&3&4&5&6&7\\
+\rowcolor[gray]{.8}[2pt][2pt]8&9&10&11&12&13&14\\
+15&16&17&18&19&20&21\\
+22&23&24&25&26&27&28\\
+29&30&31&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}\\
+\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}&\textcolor{dark-gray}{10}&\textcolor{dark-gray}{11}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+%%%%%NEW WEEK%%%%
+
+\renewcommand{\Sun}{15}
+\renewcommand{\Mon}{16}
+\renewcommand{\Tue}{17}
+\renewcommand{\Wed}{18}
+\renewcommand{\Thr}{19}
+\renewcommand{\Fri}{20}
+\renewcommand{\Sat}{21}
+
+\renewcommand{\Cal}{
+\begin{tabular}
+{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}
+\multicolumn{7}{c}{\textbf{December}}\\ 
+S & M & T & W & T & F & S\\ 
+\hline 
+1&2&3&4&5&6&7\\
+8&9&10&11&12&13&14\\
+\rowcolor[gray]{.8}[2pt][2pt]15&16&17&18&19&20&21\\
+22&23&24&25&26&27&28\\
+29&30&31&\textcolor{dark-gray}{1}&\textcolor{dark-gray}{2}&\textcolor{dark-gray}{3}&\textcolor{dark-gray}{4}\\
+\textcolor{dark-gray}{5}&\textcolor{dark-gray}{6}&\textcolor{dark-gray}{7}&\textcolor{dark-gray}{8}&\textcolor{dark-gray}{9}&\textcolor{dark-gray}{10}&\textcolor{dark-gray}{11}\\
+\end{tabular}}
+
+\centerline{\input{page1.pdf_tex}}
+\centerline{\input{page2.pdf_tex}}
+
+
+
+\end{document}
