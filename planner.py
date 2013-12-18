@@ -23,8 +23,7 @@
 
 import datetime
 
-WEEKSTOPRINT = 52
-capMonths=('NULL', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December')
+WEEKSTOPRINT = 54
 capWeekdays=('Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun')
 
 
@@ -50,7 +49,7 @@ def monthCal(bdate):
 	calstring='\\begin{tabular}\n{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}\n'
 	
 	#print the month name across the top of the cal
-	calstring+=('\\multicolumn{7}{c}{\\textbf{%s}}\\\\ \n' % capMonths[bdate.month])
+	calstring+=('\\multicolumn{7}{c}{\\textbf{%s}}\\\\ \n' % bdate.strftime("%B"))
 	
 	#followed by the days of the week, and a line
 	calstring+='S & M & T & W & T & F & S\\\\ \n'
@@ -156,7 +155,7 @@ def monthlyPage(bdate):
 		if (bdate.weekday()+1)%7==6:
 			if month_print==False:
 				#the month row written sideways, taking up 5 rows.
-				calstring+='&\\multirow{5}{*}{\\begin{sideways}\\textcolor{Gray}{~~~~%s}\\end{sideways}}\\\\\n' % capMonths[bdate.month]
+				calstring+='&\\multirow{5}{*}{\\begin{sideways}\\textcolor{Gray}{~~~~%s}\\end{sideways}}\\\\\n' % bdate.strftime("%B")
 				month_print=True
 			else:
 				calstring+='& \\\\\n'
@@ -171,7 +170,7 @@ def monthlyPage(bdate):
 		calstring+='}'
 		if (bdate.weekday()+1)%7==6:
 			if month_print==False:
-				calstring+='&\\multirow{5}{*}{\\begin{sideways}\\textbf{%s}\\end{sideways}}\\\\\n' % capMonths[bdate.month]
+				calstring+='&\\multirow{5}{*}{\\begin{sideways}\\textbf{%s}\\end{sideways}}\\\\\n' % bdate.strftime("%B")
 				month_print=True
 			else:
 				calstring+='& \\\\\n'
@@ -186,7 +185,7 @@ def monthlyPage(bdate):
 		calstring+='}'
 		if (bdate.weekday()+1)%7==6:
 			if month_print==False:
-				calstring+='&\\multirow{5}{*}{\\begin{sideways}\\textcolor{Gray}{%s~~~~}\\end{sideways}}\\\\\n' % capMonths[bdate.month]
+				calstring+='&\\multirow{5}{*}{\\begin{sideways}\\textcolor{Gray}{%s~~~~}\\end{sideways}}\\\\\n' % bdate.strftime("%B")
 				month_print=True
 			else:
 				calstring+='& \\\\\n'
@@ -380,5 +379,5 @@ if __name__ == "__main__":
 	import os
 	#we start on this day,month,year but you can choose anything here
 	#newcal(datetime.date.today().year, datetime.date.today().month, datetime.date.today().day)
-	newcal(2013, 1, 1)
+	newcal(2014, 1, 1)
 	os.system('pdflatex planner.tex')
