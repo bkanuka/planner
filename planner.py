@@ -19,6 +19,7 @@
 #
 #
 
+import codecs
 
 
 JALALI = True
@@ -49,22 +50,26 @@ def monthCal(bdate):
     weektick=0
     
     #start a table with spaces separating elements
-    calstring='\\begin{tabular}\n{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}\n'
+    calstring=u'\\begin{tabular}\n{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}\n'
     
     #print the month name across the top of the cal
-    calstring+=('\\multicolumn{7}{c}{\\textbf{%s}}\\\\ \n' % bdate.strftime("%B"))
+    calstring+=(u'\\multicolumn{7}{c}{\\textfarsi{\\textbf{%s}}}\\\\ \n' % bdate.strftime("%B").decode("utf-8"))
     
     #followed by the days of the week, and a line
     if JALALI:
         for day in bdate.j_weekdays_short[::-1][:-1]:
-            calstring += day[0]
-            calstring += r' & '
-        calstring += bdate.j_weekdays_short[::-1][-1][0]
-        calstring += "\\\\ \n"
+            calstring += u'\\textfarsi{'
+            calstring += day.decode('utf-8')
+            calstring += u'}'
+            calstring += u' & '
+        calstring += u'\\textfarsi{'
+        calstring += bdate.j_weekdays_short[::-1][-1].decode("utf-8")
+        calstring += u'}'
+        calstring += u"\\\\ \n"
     else:
-        calstring+='S & M & T & W & T & F & S\\\\ \n'
+        calstring+=u'S & M & T & W & T & F & S\\\\ \n'
     
-    calstring+='\\hline \n' 
+    calstring+=u'\\hline \n' 
     
     #move bdate to the last sunday
     while bdate.weekday() > 0:
@@ -78,74 +83,75 @@ def monthCal(bdate):
         #the .8 here is the shade of gray - 1 being white. read CTAN page on rowcolor.
         #I also tell LaTeX to extend the gray box by 2pt around each number.
         #There can be issues like the gray covering an adjacent number
-        calstring+='\\rowcolor[gray]{.8}[2pt][2pt]'
+        calstring+=u'\\rowcolor[gray]{.8}[2pt][2pt]'
         
     weeklist = []
     #while we're still on last month, print in gray
     while bdate.month==advancemonth(datetime.date(curryear, currmonth, 1),-1).month:
-        weeklist.append('\\textcolor{dark-gray}{%s}' % bdate.day)
+        weeklist.append(u'\\textcolor{dark-gray}{%s}' % bdate.day)
         #if we get to the end of the week, skip a line and weektick
         if len(weeklist)==13:
             if JALALI:
                 weeklist = weeklist[::-1]
-            calstring+=' '.join(weeklist)
-            calstring+='\\\\ \n'
+            calstring+=u' '.join(weeklist)
+            calstring+=u'\\\\ \n'
             weektick+=1
             weeklist = []
         #else, just skip columns
         else:
-            weeklist.append('&')
+            weeklist.append(u'&')
         #move to next day
         bdate = bdate + datetime.timedelta(days = 1)
     
 
     while bdate.month==currmonth:
-        weeklist.append('%s' % bdate.day)
+        weeklist.append(u'%s' % bdate.day)
         if len(weeklist)==13:
             if JALALI:
                 weeklist = weeklist[::-1]
-            calstring+=' '.join(weeklist)
-            calstring+='\\\\ \n'
+            calstring+=u' '.join(weeklist)
+            calstring+=u'\\\\ \n'
             weektick+=1
             weeklist = []
             if currdate.toordinal() < bdate.toordinal()+8 and currdate.toordinal() > bdate.toordinal():
-                calstring+='\\rowcolor[gray]{.8}[2pt][2pt]'
+                calstring+=u'\\rowcolor[gray]{.8}[2pt][2pt]'
         else:
-            weeklist.append('&')
+            weeklist.append(u'&')
         bdate = bdate + datetime.timedelta(days = 1)
     
 
     while weektick < 6:
-        weeklist.append('\\textcolor{dark-gray}{%s}' % bdate.day)
+        weeklist.append(u'\\textcolor{dark-gray}{%s}' % bdate.day)
         if len(weeklist)==13:
             if JALALI:
                 weeklist = weeklist[::-1]
-            calstring+=' '.join(weeklist)
-            calstring+='\\\\ \n'
+            calstring+=u' '.join(weeklist)
+            calstring+=u'\\\\ \n'
             weektick+=1
             weeklist = []
         else:
-            weeklist.append('&')
+            weeklist.append(u'&')
         bdate = bdate + datetime.timedelta(days = 1)
         
-    calstring+='\\end{tabular}'
+    calstring+=u'\\end{tabular}'
     return calstring
 
 def colorday(bdate, lastmonth, currmonth, nextmonth):
     if bdate.month == currmonth:
-        return '\\textbf{%s}' % bdate.day
+        return u'\\textbf{%s}' % bdate.day
     elif bdate.month == lastmonth or bdate.month == nextmonth:
-        return '\\textcolor{Gray}{%s}' % bdate.day
+        return u'\\textcolor{Gray}{%s}' % bdate.day
     else:
-        return ' '
+        return u' '
 
 def colormonth(bdate, lastmonth, currmonth, nextmonth):
+    print bdate.strftime("%B")
     if bdate.month == currmonth:
-        return '\\multirow{5}{*}{\\begin{sideways}\\textbf{%s}\\end{sideways}}' % bdate.strftime("%B")
+        return u'\\multirow{5}{*}{\\begin{sideways}\\textfarsi{\\textbf{%s}}\\end{sideways}}' % bdate.strftime("%B").decode("utf-8")
     elif bdate.month == lastmonth:
-        return '\\multirow{5}{*}{\\begin{sideways}\\textcolor{Gray}{~~~~%s}\\end{sideways}}' % bdate.strftime("%B")
+        return u'\\multirow{5}{*}{\\begin{sideways}\\textcolor{Gray}{\\textfarsi{~~~~%s}}\\end{sideways}}' % bdate.strftime("%B").decode("utf-8")
     elif bdate.month == nextmonth:
-        return '\\multirow{5}{*}{\\begin{sideways}\\textcolor{Gray}{%s~~~~}\\end{sideways}}' % bdate.strftime("%B")
+        return u'\\multirow{5}{*}{\\begin{sideways}\\textcolor{Gray}{\\textfarsi{%s}~~~~}\\end{sideways}}' % bdate.strftime("%B").decode("utf-8")
 
 
 def monthlyPage(bdate):
@@ -164,10 +170,10 @@ def monthlyPage(bdate):
     #set bdate to the first of last month
     bdate=advancemonth(datetime.date(curryear, currmonth, 1),-1)
     
-    calstring='\n'
-    calstring+='\\LARGE{}\n\n'
+    calstring=u'\n'
+    calstring+=u'\\LARGE{}\n\n'
     
-    calstring+='\\vspace*{\\fill}\n\n'
+    calstring+=u'\\vspace*{\\fill}\n\n'
     
     #start a table with spaces separating elements
 
@@ -176,22 +182,28 @@ def monthlyPage(bdate):
     
     #followed by the days of the week
     if JALALI:
-        calstring+='\\begin{tabular*}{\\textwidth}[p]{@{\hspace{215pt}}r@{~~ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c}\n'
-        calstring += r' & '
+        calstring+=u'\\begin{tabular*}{\\textwidth}[p]{@{\hspace{215pt}}r@{~~ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c}\n'
+        calstring += u' & '
         for day in bdate.j_weekdays_short[::-1][:-1]:
-            calstring += day[0]
-            calstring += r' & '
-        calstring += bdate.j_weekdays_short[::-1][-1][0]
-        calstring += "\\\\ \n"
+            print day
+            print type(day)
+            calstring += u'\\textfarsi{'
+            calstring += day.decode("utf-8")
+            calstring += u'}'
+            calstring += u' & '
+        calstring += u'\\textfarsi{'
+        calstring += bdate.j_weekdays_short[::-1][-1].decode("utf-8")
+        calstring += u'}'
+        calstring += u"\\\\ \n"
     else:
-        calstring+='\\begin{tabular*}{\\textwidth}[p]{@{\hspace{215pt}}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{\\extracolsep{38pt}}l}\n'
-        calstring+='S & M & T & W & T & F & S\\\\ \n'
+        calstring+=u'\\begin{tabular*}{\\textwidth}[p]{@{\hspace{215pt}}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{\\extracolsep{38pt}}l}\n'
+        calstring+=u'S & M & T & W & T & F & S\\\\ \n'
     
     #this is a fancy line
     if JALALI:
-        calstring+='\\cline{1-8}\n'  
+        calstring+=u'\\cline{1-8}\n'  
     else:
-        calstring+='\\cline{1-7}\n'  
+        calstring+=u'\\cline{1-7}\n'  
     
 
     weeklist = []
@@ -199,77 +211,79 @@ def monthlyPage(bdate):
     print bdate
     if bdate.weekday()+1 < 7:
         for ii in range(bdate.weekday()+1):
-            weeklist.append('~')
-            weeklist.append('&')
+            weeklist.append(u'~')
+            weeklist.append(u'&')
 
     while len(weeklist) < 13:
         weeklist.append(colorday(bdate, lastmonth, currmonth, nextmonth))
-        weeklist.append('&')
+        weeklist.append(u'&')
         bdate = bdate + datetime.timedelta(days = 1)
 
     weeklist.append(colormonth(bdate, lastmonth, currmonth, nextmonth))
     if JALALI:
         weeklist = weeklist[::-1]
     print weeklist
-    calstring+=' '.join(weeklist)
-    calstring+='\\\\ \n'
+    calstring+=u' '.join(weeklist)
+    calstring+=u'\\\\ \n'
     weeklist = []
 
     while bdate.month == lastmonth:
         while len(weeklist) < 13:
             weeklist.append(colorday(bdate, lastmonth, currmonth, nextmonth))
-            weeklist.append('&')
+            weeklist.append(u'&')
             bdate = bdate + datetime.timedelta(days = 1)
 
         if bdate.month == lastmonth:
-            weeklist.append('~')
+            weeklist.append(u'~')
         else:
             weeklist.append(colormonth(bdate, lastmonth, currmonth, nextmonth))
         
         if JALALI:
             weeklist = weeklist[::-1]
         print weeklist
-        calstring+=' '.join(weeklist)
-        calstring+='\\\\ \n'
+        calstring+=u' '.join(weeklist)
+        calstring+=u'\\\\ \n'
         weeklist = []
 
     while bdate.month == currmonth:
         while len(weeklist) < 13:
             weeklist.append(colorday(bdate, lastmonth, currmonth, nextmonth))
-            weeklist.append('&')
+            weeklist.append(u'&')
             bdate = bdate + datetime.timedelta(days = 1)
 
         if bdate.month == currmonth:
-            weeklist.append('~')
+            weeklist.append(u'~')
         else:
             weeklist.append(colormonth(bdate, lastmonth, currmonth, nextmonth))
         
         if JALALI:
             weeklist = weeklist[::-1]
         print weeklist
-        calstring+=' '.join(weeklist)
-        calstring+='\\\\ \n'
+        calstring+=u' '.join(weeklist)
+        calstring+=u'\\\\ \n'
         weeklist = []
     
     while bdate.month == nextmonth:
         while len(weeklist) < 13:
             weeklist.append(colorday(bdate, lastmonth, currmonth, nextmonth))
-            weeklist.append('&')
+            weeklist.append(u'&')
             bdate = bdate + datetime.timedelta(days = 1)
 
-        weeklist.append('~')
+        weeklist.append(u'~')
         
         if JALALI:
             weeklist = weeklist[::-1]
         print weeklist
-        calstring+=' '.join(weeklist)
-        calstring+='\\\\ \n'
+        calstring+=u' '.join(weeklist)
+        calstring+=u'\\\\ \n'
         weeklist = []
         
-    calstring+='\n\\end{tabular*}\n\n'
+    calstring+=u'\n\\end{tabular*}\n\n'
     
-    calstring+='\\vspace*{\\fill}\n\n\\normalsize{}\n\n\\newpage\n\n'
+    calstring+=u'\\vspace*{\\fill}\n\n\\normalsize{}\n\n\\newpage\n\n'
     
+    print calstring
+    print type(calstring)
     return calstring
 
 def advancemonth(bdate, nmonths):
@@ -302,7 +316,7 @@ def newcal(year, month, day):
     
     #LaTeX preamble. Notice use of double slash - this is used to print a single
     # slash in Python. Also comments will switch to using % as per LaTeX
-    top_mat="""\\documentclass[12pt]{article}
+    top_mat=u"""\\documentclass[12pt]{article}
 
 %the following lines change font
 %\\usepackage[T1]{fontenc}
@@ -310,9 +324,12 @@ def newcal(year, month, day):
 %\\renewcommand*\\familydefault{\\sfdefault}
 
 %%Paletino
-\\usepackage[T1]{fontenc}
-\\usepackage[sc]{mathpazo}
+%\\usepackage[T1]{fontenc}
+%\\usepackage[sc]{mathpazo}
 \\linespread{1.05}
+\\usepackage{fontspec,xltxtra,xunicode}
+%\\fontspec[Script=Arabic]{Scheherazade}
+\\newfontfamily\\arabicfont[Script=Arabic]{Scheherazade}
 
 %%Biolinium
 %\\usepackage[T1]{fontenc}
@@ -343,6 +360,9 @@ def newcal(year, month, day):
 
 %Define a gray that shows up on the printer
 \\definecolor{dark-gray}{gray}{0.4}
+\\usepackage{polyglossia}
+\\setdefaultlanguage{english}
+\\setotherlanguage{farsi}
 
 % Finally!
 \\begin{document}
@@ -374,14 +394,26 @@ def newcal(year, month, day):
 
  
 """
+    fadays = datetime.date.j_weekdays_fa
+    daydefs = u"""
+\\newcommand{\\sunday}{~\\textfarsi{{\Large %s}}}
+\\newcommand{\\monday}{~\\textfarsi{{\Large %s}}}
+\\newcommand{\\tuesday}{~\\textfarsi{{\Large %s}}}
+\\newcommand{\\wednesday}{~\\textfarsi{{\Large %s}}}
+\\newcommand{\\thursday}{~\\textfarsi{{\Large %s}}}
+\\newcommand{\\friday}{~\\textfarsi{{\Large %s}}}
+\\newcommand{\\saturday}{~\\textfarsi{{\Large %s}}}
+""" % tuple([x.decode("utf-8") for x in fadays])
 #End of preamble
 
     #Take in start date
     currdate=datetime.date(year, month, day)
     
     #Open file "planner.tex" for writing
-    ncal=file("planner.tex", 'w')
+    ncal = codecs.open("planner.tex", "w", "utf-8") 
+    #ncal=file("planner.tex", 'w')
     #write LaTeX preamble to file
+    top_mat = top_mat + daydefs
     ncal.write(top_mat)
     
     currdate=currdate.fromordinal((currdate.toordinal()-7))
