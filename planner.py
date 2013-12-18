@@ -21,7 +21,7 @@
 
 
 
-JALALI = False
+JALALI = True
 
 if JALALI:
     import jdatetime as datetime
@@ -56,10 +56,10 @@ def monthCal(bdate):
     
     #followed by the days of the week, and a line
     if JALALI:
-        for day in bdate.j_weekday_short[::-1][:-1]:
-            calstring += day
+        for day in bdate.j_weekdays_short[::-1][:-1]:
+            calstring += day[0]
             calstring += r' & '
-        calstring += bdate.j_weekday_short[::-1][-1]
+        calstring += bdate.j_weekdays_short[::-1][-1][0]
         calstring += "\\\\ \n"
     else:
         calstring+='S & M & T & W & T & F & S\\\\ \n'
@@ -141,11 +141,11 @@ def colorday(bdate, lastmonth, currmonth, nextmonth):
 
 def colormonth(bdate, lastmonth, currmonth, nextmonth):
     if bdate.month == currmonth:
-        return '\\multirow{5}{*}{\\begin{sideways}\\textbf{%s}\\end{sideways}}\\\\ \n' % bdate.strftime("%B")
+        return '\\multirow{5}{*}{\\begin{sideways}\\textbf{%s}\\end{sideways}}' % bdate.strftime("%B")
     elif bdate.month == lastmonth:
-        return '\\multirow{5}{*}{\\begin{sideways}\\textcolor{Gray}{~~~~%s}\\end{sideways}}\\\\ \n' % bdate.strftime("%B")
+        return '\\multirow{5}{*}{\\begin{sideways}\\textcolor{Gray}{~~~~%s}\\end{sideways}}' % bdate.strftime("%B")
     elif bdate.month == nextmonth:
-        return '\\multirow{5}{*}{\\begin{sideways}\\textcolor{Gray}{%s~~~~}\\end{sideways}}\\\\ \n' % bdate.strftime("%B")
+        return '\\multirow{5}{*}{\\begin{sideways}\\textcolor{Gray}{%s~~~~}\\end{sideways}}' % bdate.strftime("%B")
 
 
 def monthlyPage(bdate):
@@ -173,21 +173,34 @@ def monthlyPage(bdate):
 
     #this is a special table that is textwidth. the 215pt starts the table far to the right.
     #the 38pt is the separation between sunday's date and the month name (written sideways)
-    calstring+='\\begin{tabular*}{\\textwidth}[p]{@{\hspace{215pt}}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{\\extracolsep{38pt}}l}\n'
     
     #followed by the days of the week
-    calstring+='S & M & T & W & T & F & S &\\\\ \n'
+    if JALALI:
+        calstring+='\\begin{tabular*}{\\textwidth}[p]{@{\hspace{215pt}}r@{~~ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c}\n'
+        calstring += r' & '
+        for day in bdate.j_weekdays_short[::-1][:-1]:
+            calstring += day[0]
+            calstring += r' & '
+        calstring += bdate.j_weekdays_short[::-1][-1][0]
+        calstring += "\\\\ \n"
+    else:
+        calstring+='\\begin{tabular*}{\\textwidth}[p]{@{\hspace{215pt}}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{\\extracolsep{38pt}}l}\n'
+        calstring+='S & M & T & W & T & F & S\\\\ \n'
     
     #this is a fancy line
-    calstring+='\\cline{1-7}\n'  
+    if JALALI:
+        calstring+='\\cline{1-8}\n'  
+    else:
+        calstring+='\\cline{1-7}\n'  
     
 
     weeklist = []
         
     print bdate
-    for ii in range(bdate.weekday()+1):
-        weeklist.append('~')
-        weeklist.append('&')
+    if bdate.weekday()+1 < 7:
+        for ii in range(bdate.weekday()+1):
+            weeklist.append('~')
+            weeklist.append('&')
 
     while len(weeklist) < 13:
         weeklist.append(colorday(bdate, lastmonth, currmonth, nextmonth))
@@ -195,8 +208,11 @@ def monthlyPage(bdate):
         bdate = bdate + datetime.timedelta(days = 1)
 
     weeklist.append(colormonth(bdate, lastmonth, currmonth, nextmonth))
+    if JALALI:
+        weeklist = weeklist[::-1]
     print weeklist
     calstring+=' '.join(weeklist)
+    calstring+='\\\\ \n'
     weeklist = []
 
     while bdate.month == lastmonth:
@@ -206,11 +222,15 @@ def monthlyPage(bdate):
             bdate = bdate + datetime.timedelta(days = 1)
 
         if bdate.month == lastmonth:
-            weeklist.append('\\\\ \n')
+            weeklist.append('~')
         else:
             weeklist.append(colormonth(bdate, lastmonth, currmonth, nextmonth))
-        calstring+=' '.join(weeklist)
+        
+        if JALALI:
+            weeklist = weeklist[::-1]
         print weeklist
+        calstring+=' '.join(weeklist)
+        calstring+='\\\\ \n'
         weeklist = []
 
     while bdate.month == currmonth:
@@ -220,11 +240,15 @@ def monthlyPage(bdate):
             bdate = bdate + datetime.timedelta(days = 1)
 
         if bdate.month == currmonth:
-            weeklist.append('\\\\ \n')
+            weeklist.append('~')
         else:
             weeklist.append(colormonth(bdate, lastmonth, currmonth, nextmonth))
-        calstring+=' '.join(weeklist)
+        
+        if JALALI:
+            weeklist = weeklist[::-1]
         print weeklist
+        calstring+=' '.join(weeklist)
+        calstring+='\\\\ \n'
         weeklist = []
     
     while bdate.month == nextmonth:
@@ -233,9 +257,13 @@ def monthlyPage(bdate):
             weeklist.append('&')
             bdate = bdate + datetime.timedelta(days = 1)
 
-        weeklist.append('\\\\ \n')
-        calstring+=' '.join(weeklist)
+        weeklist.append('~')
+        
+        if JALALI:
+            weeklist = weeklist[::-1]
         print weeklist
+        calstring+=' '.join(weeklist)
+        calstring+='\\\\ \n'
         weeklist = []
         
     calstring+='\n\\end{tabular*}\n\n'
@@ -254,9 +282,9 @@ def advancemonth(bdate, nmonths):
 
     month = bdate.month - 1 + nmonths
     if nmonths < 0:
-        year = bdate.year + (nmonths / 12) + 1
+        year = bdate.year + (month / 12) 
     else:
-        year = bdate.year + nmonths / 12
+        year = bdate.year + month / 12
     month = month % 12 + 1
     if JALALI:
         day = min(bdate.day, datetime.j_days_in_month[month -1])
@@ -419,6 +447,6 @@ def newcal(year, month, day):
 if __name__ == "__main__":
     import os
     #we start on this day,month,year but you can choose anything here
-    #newcal(datetime.date.today().year, datetime.date.today().month, datetime.date.today().day)
-    newcal(2014, 1, 1)
+    newcal(datetime.date.today().year, datetime.date.today().month, datetime.date.today().day)
+    #newcal(2014, 1, 1)
     #os.system('pdflatex planner.tex')
