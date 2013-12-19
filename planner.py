@@ -379,6 +379,6 @@ def newcal(year, month, day):
 if __name__ == "__main__":
 	import os
 	#we start on this day,month,year but you can choose anything here
-	#newcal(datetime.date.today().year, datetime.date.today().month, datetime.date.today().day)
-	newcal(2013, 1, 1)
+	newcal(datetime.date.today().year, datetime.date.today().month, datetime.date.today().day)
+	#newcal(2013, 1, 1)
 	os.system('pdflatex planner.tex')
