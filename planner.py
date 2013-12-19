@@ -53,7 +53,7 @@ def monthCal(bdate):
     calstring=u'\\begin{tabular}\n{@{}c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{}}\n'
     
     #print the month name across the top of the cal
-    calstring+=(u'\\multicolumn{7}{c}{\\textfarsi{\\textbf{%s}}}\\\\ \n' % bdate.strftime("%B").decode("utf-8"))
+    calstring+=(u'\\multicolumn{7}{c}{\\textfarsi{{\\Large\\textbf{%s}}}}\\\\ \n' % bdate.strftime("%B").decode("utf-8"))
     
     #followed by the days of the week, and a line
     if JALALI:
@@ -149,9 +149,9 @@ def colormonth(bdate, lastmonth, currmonth, nextmonth):
     if bdate.month == currmonth:
         return u'\\multirow{5}{*}{\\begin{sideways}\\textfarsi{\\textbf{%s}}\\end{sideways}}' % bdate.strftime("%B").decode("utf-8")
     elif bdate.month == lastmonth:
-        return u'\\multirow{5}{*}{\\begin{sideways}\\textcolor{Gray}{\\textfarsi{~~~~%s}}\\end{sideways}}' % bdate.strftime("%B").decode("utf-8")
+        return u'\\multirow{5}{*}{\\begin{sideways}\\textcolor{Gray}{\\textfarsi{%s~~}}\\end{sideways}}' % bdate.strftime("%B").decode("utf-8")
     elif bdate.month == nextmonth:
-        return u'\\multirow{5}{*}{\\begin{sideways}\\textcolor{Gray}{\\textfarsi{%s}~~~~}\\end{sideways}}' % bdate.strftime("%B").decode("utf-8")
+        return u'\\multirow{5}{*}{\\begin{sideways}\\textcolor{Gray}{\\textfarsi{~~%s}}\\end{sideways}}' % bdate.strftime("%B").decode("utf-8")
 
 
 def monthlyPage(bdate):
@@ -182,7 +182,7 @@ def monthlyPage(bdate):
     
     #followed by the days of the week
     if JALALI:
-        calstring+=u'\\begin{tabular*}{\\textwidth}[p]{@{\hspace{215pt}}r@{~~ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c}\n'
+        calstring+=u'\\begin{tabular*}{\\textwidth}[p]{@{ }r@{~~ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{ }c@{\hspace{215pt}}}\n'
         calstring += u' & '
         for day in bdate.j_weekdays_short[::-1][:-1]:
             print day
