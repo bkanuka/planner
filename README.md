@@ -17,3 +17,14 @@ Now run `python planner.py`
 Errors will most likely be caused by an incomplete LaTeX installation. Install missing packages and try again.
 
 (you can always try to get in contact if you're stuck!)
+
+Right to Left
+=======
+
+
+    python planner.py && xelatex planner.tex
+    pdftk planner.pdf cat 1-endsouth output planner-rev.pdf
+    pdftops -level3 planner-rev.pdf - | psbook | psnup -s1 -2 -W7.0in -H8.5in -w8.5in -h14.0in -plegal | ps2pdf - planner-fa-book.pdf
+    zathura planner-fa-book.pdf
+
+papersize is currently chosen with `/etc/papersize` but there might be a better way
