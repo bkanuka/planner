@@ -444,8 +444,9 @@ def newcal(year, month, day):
         
         
         if weddate.month != currdate.fromordinal((currdate.toordinal()-4)).month:
-            ncal.write('~\\newpage')
+            ncal.write('\\newpage')
             ncal.write(monthlyPage(weddate))    
+            ncal.write('\n\n~\\newpage')
                     
         
         ncal.write("""%%%%%NEW WEEK%%%%\n\n""")
