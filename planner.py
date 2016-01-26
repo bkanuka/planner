@@ -382,3 +382,4 @@ if __name__ == "__main__":
 	newcal(datetime.date.today().year, datetime.date.today().month, datetime.date.today().day)
 	#newcal(2013, 1, 1)
 	os.system('pdflatex planner.tex')
+	os.system('pdfbook --short-edge --legalpaper planner.pdf')
