@@ -237,19 +237,25 @@ def newcal(year, month, day):
 	top_mat="""\\documentclass[12pt]{article}
 
 %the following lines change font
-%\\usepackage[T1]{fontenc}
-%\\usepackage[scaled]{helvet}
-%\\renewcommand*\\familydefault{\\sfdefault}
+
+%%Helvetica
+\\usepackage[T1]{fontenc}
+\\usepackage[scaled]{helvet}
+\\renewcommand*\\familydefault{\\sfdefault}
 
 %%Paletino
-\\usepackage[T1]{fontenc}
-\\usepackage[sc]{mathpazo}
-\\linespread{1.05}
+%\\usepackage[T1]{fontenc}
+%\\usepackage[sc]{mathpazo}
+%\\linespread{1.05}
 
 %%Biolinium
 %\\usepackage[T1]{fontenc}
 %\\usepackage{libertine}
 %\\renewcommand*\\familydefault{\\sfdefault}  %% Only if the base font of the document is to be sans serif
+
+%%Open Sans
+%\\usepackage[default,osfigures,scale=1.0]{opensans}
+%\\usepackage[T1]{fontenc}
 
 
 %This is where page size is changed. currently set at half-legal
@@ -381,5 +387,5 @@ if __name__ == "__main__":
 	#we start on this day,month,year but you can choose anything here
 	newcal(datetime.date.today().year, datetime.date.today().month, datetime.date.today().day)
 	#newcal(2013, 1, 1)
-	os.system('pdflatex planner.tex')
-	os.system('pdfbook --short-edge --legalpaper planner.pdf')
+	#os.system('pdflatex planner.tex')
+	#os.system('pdfbook --short-edge --legalpaper planner.pdf')

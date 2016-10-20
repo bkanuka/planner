@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+if [ -z "$1" ]; then
+    TEMPLATE=default
+else
+    TEMPLATE="$1"
+fi
+
+cp "templates/$TEMPLATE/page1.svg" .
+cp "templates/$TEMPLATE/page2.svg" .
+
+inkscape -f page1.svg --export-area-page --export-pdf=page1.pdf --export-latex --without-gui
+inkscape -f page2.svg --export-area-page --export-pdf=page2.pdf --export-latex --without-gui
+
+python planner.py
+
+pdflatex planner.tex
+pdfbook --short-edge --legalpaper planner.pdf
+
+rm -f page1.* page2.* *.log *.tex *.aux
